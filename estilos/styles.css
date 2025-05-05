@@ -1,3 +1,16 @@
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .quicksand {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+  }
+
 /* Reset básico */
 *{
     margin: 0;
@@ -12,7 +25,7 @@
     color: rgb(255, 255, 255);
   }
 
-  /* Fondo con imagen de hero */
+  /* FONDO DE VIDEO */
   .encabezado {
 
     background-position: center;
@@ -33,6 +46,8 @@
     z-index: -1;
 
     }
+
+/*-----------------------------------------------------------*/
   
   /* Barra de navegación */
   .barra-navegacion {
@@ -56,32 +71,40 @@
     color: white;
 
   }
+
+  /*-----------------------------------------------------------*/
   
   /* Logo */
   .logo h1 {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+
+  .logo .subtitulo{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    display: block;
   }
 
   .logo {
     text-align: center;
     margin-top: -2%;
+    line-height: 125%;
   }
+  /*-----------------------------------------------------------*/
 
-  .subtitulo {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-  }
-  
   /* Menú */
   .menu {
     list-style: none;
     display: flex;
     gap: 2rem;
-    margin-left: 34%;
+    margin-left: 33.5%;
     margin-top: 1%;
   }
 
@@ -90,13 +113,15 @@
     color: white;
   }
 
+  /*-----------------------------------------------------------*/
+
   .boton-hero{ /*BOTON INDEX*/
 
     color: white;
     text-decoration: none;
   }
-
-  .contenido-principal{ 
+    /*-----------------------------------------------------------*/
+  .contenido-principal{ /*Titulo del index*/
     margin-top: 8%;
    text-align: center;
 }
