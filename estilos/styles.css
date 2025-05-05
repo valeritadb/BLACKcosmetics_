@@ -23,6 +23,7 @@
     }
 
     .encabezado video{
+
     position: fixed;
     top: 0;
     left: 0;
@@ -30,6 +31,7 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1;
+
     }
   
   /* Barra de navegación */
@@ -59,6 +61,7 @@
   .logo h1 {
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
   }
 
   .logo {
