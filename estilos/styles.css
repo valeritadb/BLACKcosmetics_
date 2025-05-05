@@ -10,29 +10,54 @@
     height: 100%;
     width: 100%;
   }
+
+  header{
+    display: block;
+  }
   
   /* Fondo con imagen de hero */
   .encabezado {
-    background-image: url("ruta/de/tu/imagen.jpg"); /* Cambia por tu imagen */
+
+    background-image: url("../fotos/fondoPrueba.png"); /* Cambia por tu imagen */
     background-size: cover;
     background-position: center;
     height: 100vh;
     color: white;
     position: relative;
+    background-color: white;
+    
   }
   
   /* Barra de navegación */
   .barra-navegacion {
-    display: flex;
+    
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
+    
+  }
+
+  .iconos-usuario{
+    text-align: right;
+  }
+
+  .iconos-usuario a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: 20px;
+
   }
   
   /* Logo */
   .logo h1 {
     font-size: 2rem;
     font-weight: bold;
+  }
+
+  .logo {
+    text-align: center;
+    margin-top: -2%;
   }
   .subtitulo {
     display: block;
@@ -46,4 +71,21 @@
     list-style: none;
     display: flex;
     gap: 2rem;
+    margin-left: 34%;
+    margin-top: 1%;
   }
+
+  .menu a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .boton-hero{
+    color: white;
+    text-decoration: none;
+  }
+
+  .contenido-principal{
+    margin-top: 8%;
+   text-align: center;
+}
