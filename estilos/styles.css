@@ -1,0 +1,49 @@
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Fondo con imagen de hero */
+  .encabezado {
+    background-image: url("ruta/de/tu/imagen.jpg"); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    position: relative;
+  }
+  
+  /* Barra de navegación */
+  .barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+  }
+  
+  /* Logo */
+  .logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .subtitulo {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  
+  /* Menú */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
