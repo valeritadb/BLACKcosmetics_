@@ -125,8 +125,11 @@
     /*-----------------------------------------------------------*/
      /*Titulo del index*/
     .contenido-principal{ 
-
     text-align: center;
     margin-top: 15%;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 20px;
 
 }
