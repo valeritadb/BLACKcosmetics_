@@ -11,20 +11,16 @@
     width: 100%;
   }
 
-  header{
-    display: block;
-  }
-  
   /* Fondo con imagen de hero */
   .encabezado {
 
-    background-image: url("../fotos/fondoPrueba.png"); /* Cambia por tu imagen */
+    background-image: url("../fotos/"); /* Cambia por tu imagen */
     background-size: cover;
     background-position: center;
     height: 100vh;
     color: white;
     position: relative;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     
   }
   
