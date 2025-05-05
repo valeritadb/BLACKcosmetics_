@@ -9,20 +9,28 @@
     font-family: 'Arial', sans-serif;
     height: 100%;
     width: 100%;
+    color: rgb(255, 255, 255);
   }
 
   /* Fondo con imagen de hero */
   .encabezado {
 
-    background-image: url("../fotos/"); /* Cambia por tu imagen */
-    background-size: cover;
     background-position: center;
     height: 100vh;
-    color: white;
     position: relative;
-    background-color: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
     
-  }
+    }
+
+    .encabezado video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    }
   
   /* Barra de navegación */
   .barra-navegacion {
@@ -30,6 +38,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
+    z-index: 2;
     
   }
 
@@ -38,10 +47,11 @@
   }
 
   .iconos-usuario a{
-    color: white;
+    
     text-decoration: none;
     letter-spacing: 5px;
     font-size: 20px;
+    color: white;
 
   }
   
@@ -55,6 +65,7 @@
     text-align: center;
     margin-top: -2%;
   }
+
   .subtitulo {
     display: block;
     font-size: 0.8rem;
@@ -76,12 +87,13 @@
     color: white;
   }
 
-  .boton-hero{
+  .boton-hero{ /*BOTON INDEX*/
+
     color: white;
     text-decoration: none;
   }
 
-  .contenido-principal{
+  .contenido-principal{ 
     margin-top: 8%;
    text-align: center;
 }
