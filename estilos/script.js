@@ -14,16 +14,20 @@ window.addEventListener("scroll", function(){
 });
 
 document.addEventListener("DOMContentLoaded", function(){
-    var popupCookies = document.getElementById("popupCookies");
-    var aceptarCookies = document.getElementById("aceptarCookies");
+    var popupCookies = document.getElementById("popup-cookies");
+    var aceptarCookies = document.getElementById("aceptar-cookies");
 
-    //Mostar la ventana solo si no se han aceptado las cookies
-    if (!localStorage.getItem(cookiesAceptadas)){
+    //verificacion de si ya fueron aceptadas
+    if (localStorage.getItem("cookies-aceptadas") === "true"){
+    popupCookies.style.display = "none";
+    } else {
         popupCookies.style.display = "flex";
     }
 
+    //evento al hacer click
+
     aceptarCookies.addEventListener("click", function(){
-        localStorage.setItem("cookiesAceptadas", "true");
+        localStorage.setItem("cookies-aceptadas", "true");
         popupCookies.style.display = "none";
     });
 });
