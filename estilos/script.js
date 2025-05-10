@@ -16,18 +16,19 @@ window.addEventListener("scroll", function(){
 document.addEventListener("DOMContentLoaded", function(){
     var popupCookies = document.getElementById("popup-cookies");
     var aceptarCookies = document.getElementById("aceptar-cookies");
+    var rechazarCookies = document.getElementById("rechazar-cookies");
 
-    //verificacion de si ya fueron aceptadas
-    if (localStorage.getItem("cookies-aceptadas") === "true"){
-    popupCookies.style.display = "none";
-    } else {
+     // Mostrar la ventana solo si el usuario no ha aceptado cookies
+    if (!localStorage.getItem("cookiesAccepted")) {
         popupCookies.style.display = "flex";
     }
 
-    //evento al hacer click
-
-    aceptarCookies.addEventListener("click", function(){
-        localStorage.setItem("cookies-aceptadas", "true");
+    aceptarCookies.addEventListener("click", function() {
+        localStorage.setItem("cookiesAccepted", "true");
         popupCookies.style.display = "none";
+    });
+
+    rechazarCookies.addEventListener("click", function() {
+        popupCookies.style.display = "none"; // Solo oculta la ventana sin guardar nada
     });
 });
