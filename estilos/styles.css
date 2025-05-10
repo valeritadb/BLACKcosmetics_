@@ -35,11 +35,10 @@
     font-family: 'Arial', sans-serif;
     height: 100%;
     width: 100%;
-    color: rgb(255, 255, 255);
   }
 
   /* FONDO DE VIDEO */
-  .encabezado {
+  .header {
 
     background-position: center;
     height: 100vh;
@@ -48,9 +47,9 @@
     
     }
 
-    .encabezado video{
+    .header video{
 
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -69,11 +68,18 @@
     align-items: center;
     padding: 1.5rem 2rem;
     z-index: 2;
+    flex-wrap: wrap;
+    width: 100%;
+    display: block;
     
   }
 
   .iconos-usuario{
     text-align: right;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    flex: 1;
   }
 
   .iconos-usuario a{
@@ -82,33 +88,44 @@
     letter-spacing: 5px;
     font-size: 20px;
     color: white;
+    transition: all 0.3 ease;
 
+  }
+
+  .iconos-usuario a:hover{
+    color: #ffacec;
   }
 
   /*-----------------------------------------------------------*/
   
   /* Logo */
   .logo h1 {
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: bold;
     text-align: center;
     font-family: 'Anton', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
     font-weight: 300;
+    line-height: 2rem;
+    flex-grow: 1;
+  }
+
+  .logo a{
+    text-decoration: none;
+    color: white;
   }
 
   .logo .subtitulo{
     font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    font-size: 1.2rem;
     display: block;
   }
 
   .logo {
     text-align: center;
-    margin-top: -2%;
-    line-height: 125%;
+    margin-top: -1%;
   }
   /*-----------------------------------------------------------*/
 
@@ -116,8 +133,8 @@
   .menu {
     list-style: none;
     display: flex;
-    gap: 2rem;
-    margin-left: 33.5%;
+    gap: 1rem;
+    justify-content: center;
     margin-top: 1%;
   }
 
@@ -126,27 +143,45 @@
     color: white;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .menu a:hover{
+    border-bottom: 1px solid white;
   }
 
   /*-----------------------------------------------------------*/
 
   .boton-hero{ /*BOTON INDEX*/
 
-    color: white;
+    color: #c6937f;
     text-decoration: none;
-    margin-top: 4px;
+    margin-top: 1rem;
     font-family: 'Quicksand', sans-serif;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    padding-inline: 2rem;
+    cursor: pointer;
+    border-style: none;
+    font-weight: 700;
   }
+
+  .boton-hero:hover{
+    background-color: rgba(210, 210, 210, 0.4);
+    color: white;
+  }
+  
     /*-----------------------------------------------------------*/
      /*Titulo del index*/
     .contenido-principal{ 
     
     text-align: center;
-    margin-top: 15%;
+    margin-top: 12%;
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
     font-weight: 100;
     font-size: 20px;
+    color: white;
 }
 
 .subtitulo-hero{
