@@ -42,8 +42,7 @@
 
     background-position: center;
     height: 100vh;
-    position: relative;
-    background: rgba(0, 0, 0, 0.4);
+    
     
     }
 
@@ -59,11 +58,13 @@
 
     }
 
+/*----------------------------------------------------------*/
+
 /*-----------------------------------------------------------*/
   
   /* Barra de navegación */
   .barra-navegacion {
-    
+    z-index: 10000;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
@@ -71,7 +72,18 @@
     flex-wrap: wrap;
     width: 100%;
     display: block;
-    
+    top: 0;
+    position: fixed;
+  }
+
+  .scrolled{
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .scrolled .menu a, .scrolled .iconos-usuario a, .scrolled .logo a{
+    color: black;
   }
 
   .iconos-usuario{
@@ -100,7 +112,7 @@
   
   /* Logo */
   .logo h1 {
-    font-size: 3.5rem;
+    font-size: 3.0rem;
     font-weight: bold;
     text-align: center;
     font-family: 'Anton', sans-serif;
@@ -119,7 +131,7 @@
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     letter-spacing: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     display: block;
   }
 
@@ -135,7 +147,7 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-top: 1%;
+    margin-top: 0.3%;
   }
 
   .menu a {
@@ -176,7 +188,7 @@
     .contenido-principal{ 
     
     text-align: center;
-    margin-top: 12%;
+    margin-top: 16%;
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
     font-weight: 100;
