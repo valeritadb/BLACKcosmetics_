@@ -32,3 +32,16 @@ document.addEventListener("DOMContentLoaded", function(){
         popupCookies.style.display = "none"; // Solo oculta la ventana sin guardar nada
     });
 });
+
+// Función para mostrar el pop-up al cargar la página
+window.onload = function() {
+    document.getElementById('popup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+};
+
+// Función para cerrar el pop-up
+function cerrarPopup() {
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
+
