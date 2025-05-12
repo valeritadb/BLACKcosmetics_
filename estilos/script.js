@@ -6,7 +6,7 @@ console.log("probandoooooo");
 
 window.addEventListener("scroll", function(){
     var header = document.querySelector(".barra-navegacion");
-    if(window.scrollY > 100) {
+    if(window.scrollY > 50) {
         header.classList.add("scrolled");
     } else {
         header.classList.remove("scrolled");

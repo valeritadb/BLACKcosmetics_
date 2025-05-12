@@ -37,13 +37,14 @@
     width: 100%;
   }
 
-  /* FONDO DE VIDEO */
+  
   .header {
 
     background-position: center;
     height: 100vh;
     }
 
+    /* FONDO DE VIDEO */
     .header video{
 
     position: absolute;
@@ -55,6 +56,18 @@
     z-index: -1;
 
     }
+
+  /*MEDIA QUERY PARA PANTALLA DE TELEFONOS*/
+  @media screen and (max-width: 768px) {
+    .header{
+      height: 55vh;
+      background-size: cover;
+    }
+    .header video {
+      height: 55vh;
+      object-fit: cover;
+    }
+  }
 
 /*----------------------------------------------------------*/
 
@@ -106,6 +119,34 @@
     color: #c6937f;
   }
 
+  /*MEDIA QUERY PARA PANTALLA DE TELEFONOS*/
+  @media screen and (max-width: 768px) {
+    .barra-navegacion{
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .iconos-usuario{
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .iconos-usuario a {
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    .scrolled{
+      background-color: white;
+    }
+    .scrolled .menu a, .scrolled .iconos-usuario a, .scrolled .logo a {
+    color: black;
+  }
+
+  }
+
   /*-----------------------------------------------------------*/
   
   /* Logo */
@@ -137,6 +178,25 @@
     text-align: center;
     margin-top: -1%;
   }
+
+  @media screen and (max-width: 768px) {
+    .logo h1{
+      font-size: 2.2rem;
+      letter-spacing: 0.1rem;
+      line-height: 1.8rem;
+    }
+
+    .logo .subtitulo{
+      font-size: 0.8rem;
+      letter-spacing: 0.3rem;
+    }
+
+    .logo{
+      margin-top: 1%;
+      text-align: center;
+      padding: 1%;
+    }
+  }
   /*-----------------------------------------------------------*/
 
   /* Menú */
@@ -158,6 +218,16 @@
 
   .menu a:hover{
     border-bottom: 1px solid white;
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu a {
+      font-size: 15px;
+      padding: 0.3rem;
+    }
+    .menu{
+      gap: 2px;
+    }
   }
 
   /*-----------------------------------------------------------*/
@@ -186,18 +256,37 @@
     .contenido-principal{ 
     
     text-align: center;
-    margin-top: 16%;
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
     font-weight: 100;
     font-size: 20px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    height: 100vh; /* Ocupar toda la pantalla */
 }
 
 .subtitulo-hero{
     font-family: "Birthstone Bounce", cursive;
     font-weight: 300;
     font-size: 40px;
+}
+
+@media screen and (max-width: 780px) {
+  .boton-hero{
+    font-size: 16px;
+    padding: 0.4rem 1.5rem;
+  }
+
+  .contenido-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    height: 55vh; /* Ocupar toda la pantalla */
+  }
 }
 /*----------------------------------------*/
 
@@ -230,6 +319,22 @@
 .cont-cookies button:hover{
   background-color: #ccc;
   color: black;
+}
+
+@media screen and (max-width: 768px){
+  .cont-cookies{
+     flex-direction: column; /* Apilar elementos */
+    padding: 1rem; 
+    gap: 5px; /* Menos separación entre elementos */
+    bottom: 10px; /* Ajustar posición */
+    left: 10px;
+    right: 10px;
+  }
+
+  .cont-cookies button {
+    font-size: 14px; /* Reducir tamaño de fuente */
+    padding: 0.5rem 5rem; /* Ajustar el tamaño del botón */
+  }
 }
 
 /*----------------------------------------*/
@@ -348,6 +453,29 @@
   border: 0.5px black solid;
 }
 
+@media screen and (max-width: 768px) {
+  .popup{
+    flex-direction: column; /*apilar elementos*/
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .img-popup{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .content-popup{
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #boton-popup{
+    width: 100%;
+  }
+}
+
 /*SCROLL 1 DEL INDEX (MAQUILLAJE)*/
 
 .contenedor-maquillaje{
@@ -431,5 +559,22 @@
 .btn-agregar:hover{
   background-color: black;
   color: white;
+}
+
+@media screen and (max-width:768px) {
+  .contenedor-maquillaje{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .producto{
+    height: auto;
+  }
+
+  .btn-agregar{
+    padding-inline: 3rem;
+    font-size: 0.9rem;
+  }
 }
 
