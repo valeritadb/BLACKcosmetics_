@@ -33,15 +33,36 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-// Función para mostrar el pop-up al cargar la página
-window.onload = function() {
-    document.getElementById('popup').style.display = 'block';
-    document.getElementById('overlay').style.display = 'block';
-};
+//Funcion que abre el popup y lo desaparece al cerrar o al enviar el correo
 
-// Función para cerrar el pop-up
-function cerrarPopup() {
-    document.getElementById('popup').style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
-}
+document.addEventListener("DOMContentLoaded", function(){
+    var popup = document.getElementById("popup");
+    var overlay = document.getElementById("overlay");
+    var botonPopup = document.getElementById("boton-popup");
+    var botonCerrar = document.getElementById("boton-popup-cerrar");
+    var campoEmail = document.getElementById("campo-email");
 
+    //Verifica si el usuario ya ha enviado su correo
+    if(localStorage.getItem("promoAccepted") === "true"){
+        popup.style.display = "none";
+        overlay.style.display = "none";
+    } else {
+        popup.style.display = "block";
+        overlay.style.display = "block";
+    }
+
+    //Evento que envia el correo y cierra el pop-up
+    botonPopup.addEventListener("click", function(){
+        if (campoEmail.value.trim() !== ""){
+            localStorage.setItem("promoAccepted", "true"); //Guarda los datos
+            popup.style.display = "none"; //oculta el popup
+            overlay.style.display = "none";
+        }
+    });
+
+    //Evento del boton de cerrar
+    botonCerrar.addEventListener("click", function(){
+        popup.style.display = "none";
+        overlay.style.display = "none";
+    });
+});
