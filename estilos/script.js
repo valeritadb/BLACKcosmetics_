@@ -74,19 +74,22 @@ function cerrarPopup() {
     document.getElementById('overlay').style.display = 'none';
 }
 
-//funciones del carrito
 document.addEventListener("DOMContentLoaded", function () {
     const iconoCarrito = document.querySelector(".fa-shopping-bag");
     const carrito = document.getElementById("carrito");
     const cerrarCarrito = document.getElementById("cerrar-carrito");
+    const overlayCarrito = document.getElementById("overlay-carrito");
 
-    // Mostrar carrito al hacer clic en el icono
+    // Mostrar carrito y fondo oscuro
     iconoCarrito.addEventListener("click", function () {
         carrito.classList.add("activo");
+        overlayCarrito.classList.add("activo");
     });
 
-    // Cerrar carrito al hacer clic en el botón
+    // Cerrar carrito y fondo oscuro
     cerrarCarrito.addEventListener("click", function () {
         carrito.classList.remove("activo");
+        overlayCarrito.classList.remove("activo");
     });
 });
+

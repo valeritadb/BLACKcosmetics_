@@ -601,8 +601,8 @@
 .carrito{
   position: fixed;
   top: 0;
-  right: -350px;
-  width: 300px;
+  right: -450px;
+  width: 30%;
   height: 100%;
   background: white;
   box-shadow: -4px 0px 10px rgba(0,0,0,0.3);
@@ -614,6 +614,9 @@
 .carrito h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-weight: 500;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.1rem;
 }
 
 .carrito ul {
@@ -646,4 +649,35 @@
 .carrito.activo {
     right: 0; /* Mostrar carrito */
 }
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px; /* Tamaño de la "X" */
+    cursor: pointer;
+    color: black;
+    font-weight:lighter;
+}
+
+.cerrar:hover {
+    color: gray; /* Cambiar color al pasar el cursor */
+}
+
+.overlay-carrito {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Oscurecimiento */
+    display: none; /* Oculto por defecto */
+    z-index: 1500; /* Debe estar por debajo del carrito */
+}
+
+/* Cuando el carrito esté activo, también se activará el fondo oscuro */
+.overlay-carrito.activo {
+    display: block;
+}
+
 
