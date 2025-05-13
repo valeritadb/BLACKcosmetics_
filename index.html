@@ -33,7 +33,7 @@
   <!-- Contenedor principal -->
   <header class="header">
     <!-- Menú de navegación -->
-     <div>
+    <div>
       <video autoplay muted loop>
         <source src="fotos/VídeoWEB.mp4">
       </video>
@@ -48,6 +48,7 @@
             <a href="#"><i class="fa fa-heart"></i></a>
             <a href="#"><i class="fa fa-shopping-bag"></i></a>
         </div>
+
       <!-- Logo -->
         <div class="logo">
             <h1><a href="index.html">BLACK.<span class="subtitulo">cosmetics</span></a></h1>
@@ -55,13 +56,22 @@
 
       <!-- Enlaces del menú -->
         <ul class="menu">
-            <li><a href="#contenedor-maquillaje">MAQUILLAJE</a></li>
+            <li><a href="#">MAQUILLAJE</a></li>
             <li><a href="#">PERSONALIZA</a></li>
             <li><a href="#">VOSOTRAS</a></li>
             <li><a href="#">ABOUT US</a></li>
         </ul>
-
     </nav>
+
+    <!-- Carrito de compras -->
+    <div class="carrito" id="carrito">
+        <h2>Tu carrito</h2>
+        <ul id="lista-carrito">
+            <!-- Los productos añadidos se mostrarán aquí -->
+        </ul>
+        <button id="cerrar-carrito">Cerrar</button>
+    </div>
+
   
     <!-- Contenido principal (hero) -->
     <div class="contenido-principal">
@@ -122,7 +132,7 @@
     <div class="popup" id="popup">
 
       <div class="img-popup">
-        <img src="" alt="Imagen dentro de popup">
+        <img src="" alt="">
       </div>
       
       <div class="content-popup">
@@ -131,8 +141,19 @@
           <li>Obtendrás un <b>10% de descuento</b> en tu primer pedido.</li>
           <li>Disfrutarás de acceso exclusivo a nuevos lanzamientos y ofertas.</li>
         </ul>
-        <input type="email" placeholder="Ingresa tu correo" id="campo-email">
+        <input type="email" placeholder="Correo electrónico" id="campo-email">
         <button onclick="cerrarPopup()" id="boton-popup">Enviar</button>
+        <br>
+        <div class="checkbox-container">
+          <label>
+            <input type="checkbox" id="terminos"> He leído, entiendo y acepto la <a href="">Política de Privacidad.</a>
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" id="publicidad">Estoy de acuerdo en recibir correos electrónicos con novedades, promociones y descuentos exclusivos.
+          </label>
+        </div>
+        <br>
         <a onclick="cerrarPopup()" id="boton-popup-cerrar">Cerrar</a>
       </div>
       

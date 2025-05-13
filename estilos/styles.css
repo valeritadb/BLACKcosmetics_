@@ -344,18 +344,22 @@
 .popup {
 
     display: flex;
+    flex-direction: row;
+    gap: 0;
     position: fixed;
     width: 55rem;
-    height:30rem;
+    height:25rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
     border-radius: 1rem;
     text-align:center;
-    padding: 0.rem;
+    padding: 0rem;
     z-index: 100;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -371,7 +375,7 @@
 
 .img-popup{
 
-  position: fixed;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.2); /*color temporal*/
   float: left;
   border-bottom-left-radius: 1rem;
@@ -384,23 +388,25 @@
 
 .popup img{
   
-  width: 95%;
-  height: auto;
-  border: 2px solid black;
+  width: 100%;
+  height: 100%;
+  
 }
 
 .content-popup{
-  
-  float: right;
+  position: relative;
   height: 100%;
   width: 50%;
-  padding: 0.8rem;
+  padding: 1.1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup h2{
   font-family: 'Anton', sans-serif;
   font-weight:500;
-  font-size: 2rem;
+  font-size: 3rem;
 
   color: #c6937f;
 
@@ -410,9 +416,18 @@
   font-family: 'Quicksand', sans-serif;
   align-items: center;
   text-align: left;
-  font-size: 0.95rem;
-  list-style: none;
+  font-size: 1rem;
   margin-bottom: 2%;
+  margin-left: 8%;
+  line-height: 2rem;
+}
+
+.checkbox-container{
+  padding: 0.5rem;
+  float: left;
+  text-align: left;
+  font-size: 0.7rem;
+  list-style: circle;
 }
 
 #boton-popup{
@@ -420,13 +435,10 @@
   color: white;
   font-family: 'Quicksand', sans-serif;
   border-style: none;
-  padding: 0.3rem;
-  padding-inline: 4rem;
-  border-radius: 1rem;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  padding: 0.5rem;
+  width: 95%;
+  border-radius: 0.8rem;
   font-weight: bold;
-
 }
 #boton-popup:hover{
   background-color: rgba(0,0,0,0.3);
@@ -449,14 +461,15 @@
 }
 
 #campo-email{
-  border-radius: 1rem;
-  padding: 0.4rem;
-  padding-inline: 2rem;
-  text-align: center;
+  border-radius: 0.8rem;
+  width: 95%;
+  padding: 0.5rem;
+  text-align: left;
   border-style: none;
   margin-top: 2%;
   margin-bottom: 2%;
   border: 0.5px black solid;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -582,5 +595,55 @@
     padding-inline: 3rem;
     font-size: 0.9rem;
   }
+}
+
+/*CARRITO DE COMPRAS*/
+.carrito{
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -4px 0px 10px rgba(0,0,0,0.3);
+  padding: 1rem;
+  transition: right 0.3s ease-in-out;
+  z-index: 2000;
+}
+
+.carrito h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.carrito ul {
+    list-style: none;
+    padding: 0;
+}
+
+.carrito li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.carrito button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.carrito button:hover {
+    background: gray;
+}
+
+/* Clase activa que despliega el carrito */
+.carrito.activo {
+    right: 0; /* Mostrar carrito */
 }
 
