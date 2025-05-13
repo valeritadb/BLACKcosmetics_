@@ -322,21 +322,23 @@
   color: black;
 }
 
-@media screen and (max-width: 768px){
-  .cont-cookies{
-     flex-direction: column; /* Apilar elementos */
-    padding: 1rem; 
-    gap: 5px; /* Menos separación entre elementos */
-    bottom: 10px; /* Ajustar posición */
-    left: 10px;
-    right: 10px;
+@media screen and (max-width: 768px) {
+  .cont-cookies {
+    flex-direction: column; /* Apilar los elementos */
+    padding: 1rem;
+    width: 90%;
+    left: 5%;
+    bottom: 10px;
+    text-align: center;
   }
 
   .cont-cookies button {
-    font-size: 14px; /* Reducir tamaño de fuente */
-    padding: 0.5rem 5rem; /* Ajustar el tamaño del botón */
+    width: 100%; /* Botones más accesibles */
+    font-size: 0.9rem;
+    padding: 0.6rem;
   }
 }
+
 
 /*----------------------------------------*/
 
@@ -473,25 +475,47 @@
 }
 
 @media screen and (max-width: 768px) {
-  .popup{
-    flex-direction: column; /*apilar elementos*/
+  .popup {
+    flex-direction: column; /* Apilar elementos */
     width: 90%;
+    height: auto;
     padding: 1rem;
   }
 
-  .img-popup{
+  .img-popup {
     width: 100%;
     height: auto;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 1rem 1rem 0 0; /* Ajuste de bordes */
   }
 
-  .content-popup{
+  .content-popup {
     width: 100%;
     padding: 1rem;
   }
 
-  #boton-popup{
+  .popup h2 {
+    font-size: 2rem; /* Reducir tamaño del título */
+  }
+
+  .popup ul {
+    font-size: 0.9rem; /* Reducir tamaño del texto */
+    margin-left: 0; /* Ajustar margen */
+    text-align: center;
+  }
+
+  #campo-email {
+    width: 100%; /* Ajustar ancho */
+    font-size: 0.9rem;
+  }
+
+  #boton-popup {
     width: 100%;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  #boton-popup-cerrar {
+    font-size: 0.7rem;
   }
 }
 
@@ -654,14 +678,14 @@
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 24px; /* Tamaño de la "X" */
+    font-size: 2.5rem; 
     cursor: pointer;
     color: black;
-    font-weight:lighter;
+    font-weight:100;
 }
 
 .cerrar:hover {
-    color: gray; /* Cambiar color al pasar el cursor */
+    color: gray; 
 }
 
 .overlay-carrito {
@@ -672,12 +696,31 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.6); /* Oscurecimiento */
     display: none; /* Oculto por defecto */
-    z-index: 1500; /* Debe estar por debajo del carrito */
+    z-index: 1500; /* debajo del carrito */
 }
 
 /* Cuando el carrito esté activo, también se activará el fondo oscuro */
 .overlay-carrito.activo {
     display: block;
 }
+
+@media screen and (max-width: 768px) {
+  .carrito {
+    width: 70%; /* Reducimos el ancho*/
+    right: -80%; /* Ajustamos posición de inicio */
+    padding: 0.8rem;
+  }
+
+  .carrito.activo {
+    right: 0; /* Hace que el carrito se deslice correctamente */
+  }
+
+  .cerrar {
+    font-size: 2rem; /* tamaño de la "X" */
+    top: 5px;
+    right: 10px;
+  }
+}
+
 
 
