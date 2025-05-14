@@ -905,6 +905,7 @@
         grid-column: span 3; /* Que ocupe todo el ancho en móviles */
         order: -1; /* Mueve el texto arriba de los videos */
         padding: 1rem;
+        height: 20vh;
     }
 
     .contenedor-combi {
