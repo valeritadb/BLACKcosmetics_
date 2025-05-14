@@ -905,9 +905,11 @@
 
   .muestranos-seccion{
     padding: 1rem;
+
   }
   .texto-muestranos p{
-    margin-top: 2%;
+    margin-top: 1%;
+    margin-bottom: 2%;
   }
 
   .texto-muestranos h2{
