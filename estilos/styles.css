@@ -843,6 +843,7 @@
 
     text-align: center;
     margin-bottom: 0.5rem;
+    width: 100%;
 }
 
 .texto-muestranos span{
@@ -891,6 +892,13 @@
 
 
 @media screen and (max-width: 768px) {
+
+  .texto-muestranos {
+        grid-column: span 3; /* Que ocupe todo el ancho en móviles */
+        order: -1; /* Mueve el texto arriba de los videos */
+        padding: 1rem;
+    }
+
     .contenedor-combi {
         grid-template-columns: 1fr; /* Una sola columna en móviles */
         grid-template-rows: auto; /* Altura ajustable */
