@@ -779,12 +779,16 @@
 }
 
 /*todos los videos verticales excepto el bloque con dos videos */
-video {
+ .cont-vosotras-videos video {
     width: 100%; /* Ajuste automático */
     height: 100%;
     aspect-ratio: 9/16; /* Videos verticales */
     border-radius: 0.5rem ;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+ .cont-vosotras-videos video:hover{
+  transform: scale(1.05);
 }
 
 /* Videos en el contenedor de dos deben ser horizontales */
