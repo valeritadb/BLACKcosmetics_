@@ -756,7 +756,7 @@
 
 .contenedor-vosotras {
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     gap: 1.5rem; /* Espacio entre columnas */
@@ -811,7 +811,7 @@
     grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     grid-template-rows: repeat(2, 1fr); /* Dos filas */
     gap: 1rem;
-    height: 60vh; /* Ocupa toda la pantalla */
+    height: 100vh; /* Ocupa toda la pantalla */
     padding: 1rem;
   }
 
@@ -845,14 +845,12 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 3rem;
+    padding: 2rem;
 }
 .texto-muestranos {
 
      width: 100%;
     text-align: center;
-    margin-bottom: 2rem;
-    order: -1; /* Mueve el texto arriba dentro del contenedor */
 }
 
 .texto-muestranos span{
@@ -900,6 +898,17 @@
 
 
 @media screen and (max-width: 768px) {
+
+  .muestranos-seccion{
+    padding: 1rem;
+  }
+  .texto-muestranos p{
+    margin-top: 2%;
+  }
+
+  .texto-muestranos h2{
+    font-size: 2rem;
+  }
 
   .texto-muestranos {
         grid-column: span 3; /* Que ocupe todo el ancho en móviles */
