@@ -64,6 +64,24 @@ window.onload = function() {
     }
 };
 
+function validarEnvio() {
+    let terminosAceptados = document.getElementById('terminos').checked;
+    let emailIngresado = document.getElementById('campo-email').value.trim();
+
+    if (!terminosAceptados) {
+        alert("Debes aceptar los términos y condiciones.");
+        return; // Detiene el proceso si no se aceptan los términos
+    }
+    
+    if (emailIngresado === "") {
+        alert("Por favor, ingresa tu correo electrónico.");
+        return; // Detiene el envío si el campo está vacío
+    }
+
+    cerrarPopup();
+}
+
+
 // Función para cerrar el pop-up
 function cerrarPopup() {
     const popup = document.getElementById('popup');
