@@ -48,8 +48,10 @@ function cerrarPopup() {
 }
 */
 //--------------------------------------------------------------------
+
+//funciones del popup
 window.onload = function() {
-    if (!localStorage.getItem('popupMostrado')) { 
+    if (!sessionStorage.getItem('popupMostrado')) { 
         setTimeout(function() {
             const popup = document.getElementById('popup');
             const overlay = document.getElementById('overlay');
@@ -57,7 +59,7 @@ window.onload = function() {
             popup.classList.add('mostrar');
             overlay.classList.add('mostrar');
 
-            localStorage.setItem('popupMostrado', "true");
+            sessionStorage.setItem('popupMostrado', "true");
         }, 4000);
     }
 };
@@ -71,8 +73,6 @@ function cerrarPopup() {
     overlay.classList.remove('mostrar');
 }
 
-
-//
 //------------------------------------------------------------------
 //Funciones del carrito
 document.addEventListener("DOMContentLoaded", function () {
