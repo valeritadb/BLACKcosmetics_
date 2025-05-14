@@ -889,6 +889,22 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 600px) {
+    .contenedor-combi {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        height: auto; /* Ajuste automático */
+    }
+
+    .combi {
+        flex-direction: row; /* Acomoda imágenes en línea */
+        justify-content: space-between;
+    }
+
+    .combi img {
+        width: 48%; /* Evita que las imágenes sean demasiado grandes */
+        height: auto;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .contenedor-combi {
