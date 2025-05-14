@@ -731,6 +731,46 @@
     right: 10px;
   }
 }
+/*--------------------------------------------------*/
+/*SECCION DE VIDEOS DEL INDEX*/
+.contenedor-vosotras {
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 1rem; /* Espacio entre columnas */
+    padding: 2rem;
+}
+
+.cont-vosotras-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Espacio entre videos */
+}
+
+/* Establecemos el contenedor con 4 videos en 2x2 */
+.cuatro-videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-rows: repeat(2, 1fr); /* 2 filas */
+    gap: 0.5rem;
+}
+
+/* Hacemos todos los videos verticales excepto el bloque con dos videos */
+video {
+    width: 100%; /* Ajuste automático */
+    aspect-ratio: 9/16; /* Videos verticales */
+    border-radius: 10px;
+}
+
+/* Videos en el contenedor de dos deben ser horizontales */
+.cont-vosotras-videos:nth-child(2) video {
+    aspect-ratio: 16/9;
+    gap: 2rem
+    ;
+}
+
+
 
 
 
