@@ -846,7 +846,7 @@
     justify-content: center;
     width: 100%;
     padding: 2rem;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 .texto-muestranos {
 
@@ -905,7 +905,7 @@
 
   .muestranos-seccion{
     padding: 1rem;
-    gap: 2rem;
+    gap: 1rem;
 
   }
 
