@@ -888,6 +888,9 @@
     height: 100%;
     gap: 0.5rem;
 }
+.combi img:hover{
+  transform: scale(1.02);
+}
 
 .combi img {
     width: 100%;
