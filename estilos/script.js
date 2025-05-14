@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function(){
         popupCookies.style.display = "none"; // Solo oculta la ventana sin guardar nada
     });
 });
+//-------------------------------------------------------------------------------------
 
 /*
 // Función para mostrar el pop-up al cargar la página
@@ -46,34 +47,34 @@ function cerrarPopup() {
     document.getElementById('overlay').style.display = 'none';
 }
 */
+//--------------------------------------------------------------------
+window.onload = function() {
+    if (!localStorage.getItem('popupMostrado')) { 
+        setTimeout(function() {
+            const popup = document.getElementById('popup');
+            const overlay = document.getElementById('overlay');
 
-window.onload = function(){
-    if (!localStorage.getItem('popupMostrado')) { //mostrar el popup si no se mostró antes
-        setTimeout(function(){
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
-            localStorage.setItem('popupMostrado', true); //guarda el estado en el navegador
-        }, 7000);//3 segundos
+            popup.classList.add('mostrar');
+            overlay.classList.add('mostrar');
+
+            localStorage.setItem('popupMostrado', "true");
+        }, 4000);
     }
 };
 
-//Funcion para cerrar el popup
-function validarEnvio(){
-    let terminosAceptados = document.getElementById('terminos').checked;
-    let emailIngresado = document.getElementById('campo-email').value.trim();
-
-    if (!terminosAceptados){
-        alert("Debes aceptar los términos y condiciones");
-        return;
-    }
-}
-
 // Función para cerrar el pop-up
 function cerrarPopup() {
-    document.getElementById('popup').style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+
+    popup.classList.remove('mostrar');
+    overlay.classList.remove('mostrar');
 }
 
+
+//
+//------------------------------------------------------------------
+//Funciones del carrito
 document.addEventListener("DOMContentLoaded", function () {
     const iconoCarrito = document.querySelector(".fa-shopping-bag");
     const carrito = document.getElementById("carrito");
