@@ -910,7 +910,7 @@
     .contenedor-combi {
         grid-template-columns: 1fr; /* Una sola columna en móviles */
         grid-template-rows: auto; /* Altura ajustable */
-        height: 100vh;
+        height: auto;
     }
 
     .combi {
