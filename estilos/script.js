@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function(){
     var rechazarCookies = document.getElementById("rechazar-cookies");
 
      // Mostrar la ventana solo si el usuario no ha aceptado cookies
-    if (!localStorage.getItem("cookiesAccepted")) {
+    if (!sessionStorage.getItem("cookiesAccepted")) {
         popupCookies.style.display = "flex";
     }
 
     aceptarCookies.addEventListener("click", function() {
-        localStorage.setItem("cookiesAccepted", "true");
+        sessionStorage.setItem("cookiesAccepted", "true");
         popupCookies.style.display = "none";
     });
 

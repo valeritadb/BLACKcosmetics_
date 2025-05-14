@@ -151,7 +151,7 @@
   
   /* Logo */
   .logo h1 {
-    font-size: 3.0rem;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
     font-family: 'Anton', sans-serif;
@@ -170,7 +170,7 @@
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     letter-spacing: 0.5rem;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     display: block;
   }
 
@@ -244,6 +244,7 @@
     cursor: pointer;
     border-style: none;
     font-weight: 700;
+    transition: all 0.3s ease;
   }
 
   .boton-hero:hover{
@@ -636,7 +637,7 @@
 .carrito{
   position: fixed;
   top: 0;
-  right: -450px;
+  right: -550px;
   width: 30%;
   height: 100%;
   background: white;
@@ -898,6 +899,7 @@
     object-fit: cover; /* Ajuste perfecto */
     border-radius: 0.5rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 
@@ -938,17 +940,96 @@
         height: auto;
     }
 }
+/*SECCION DE MENSAJE ABOUT US*/
+.seccion-mensaje {
+    width: 100%;
+    height: 90vh; /* Tamaño adaptable */
+    background-image: url(../fotos/33_4.png.jpeg); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end; /* Elementos alineados a la derecha */
+    align-items: center;
+    padding: 3rem;
+}
 
+.contenido-mensaje {
+    max-width: 40%;
+    text-align:inherit; 
+    color: rgb(255, 255, 255);
+}
 
+.contenido-mensaje h2 {
+  font-family: 'Anton', sans-serif;
+    font-size: 3rem;
+    font-weight: 550;
+    vertical-align:top;
+}
+.contenido-mensaje span{
 
+  margin-top: 1rem;
+  font-family: "Birthstone Bounce", cursive;
+  color:#c6937f;
+  vertical-align:sub;
+  letter-spacing: 0.2rem;
+}
 
+.contenido-mensaje p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
 
+.boton {
+    display: inline-block;
+    background-color: white;
+    color: #c6937f;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.boton:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
 
+@media screen and (max-width: 1024px) {
+    .seccion-mensaje {
+        height: 70vh; 
+        padding: 2rem;
+        justify-content: center; 
+    }
 
+    .contenido-mensaje {
+        max-width: 60%; 
+        text-align: center; /
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .seccion-mensaje {
+        height: auto; /* Ajuste flexible */
+        padding: 2rem;
+        display: flex;
+        flex-direction: column; /* Contenido en columna */
+        align-items: center; /* Centrar */
+        text-align: center;
+    }
 
+    .contenido-mensaje {
+        max-width: 80%; 
+    }
 
+    .contenido-mensaje h2 {
+        font-size: 2.2rem; 
 
+    .contenido-mensaje p {
+        font-size: 1rem; 
+    }
 
-
-
+    .boton {
+        padding: 0.6rem 1.2rem; 
+    }
+  }
+}
