@@ -905,11 +905,12 @@
 
   .muestranos-seccion{
     padding: 1rem;
+    
 
   }
   .texto-muestranos p{
     margin-top: 1%;
-    margin-bottom: 2%;
+    
   }
 
   .texto-muestranos h2{
@@ -924,9 +925,11 @@
     }
 
     .contenedor-combi {
+        padding: 2rem;
         grid-template-columns: 1fr; /* Una sola columna en móviles */
         grid-template-rows: auto; /* Altura ajustable */
         height: auto;
+        margin-top: 1rem;
     }
 
     .combi {
