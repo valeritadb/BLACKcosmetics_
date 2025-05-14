@@ -846,6 +846,7 @@
     justify-content: center;
     width: 100%;
     padding: 2rem;
+    gap: 2rem;
 }
 .texto-muestranos {
 
@@ -855,7 +856,6 @@
 
 .texto-muestranos span{
   font-family: "Birthstone Bounce", cursive;
-  font-size: 3.5rem;
 }
 
 .texto-muestranos h2{
@@ -886,7 +886,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 .combi img:hover{
   transform: scale(1.02);
@@ -905,12 +905,8 @@
 
   .muestranos-seccion{
     padding: 1rem;
-    
+    gap: 2rem;
 
-  }
-  .texto-muestranos p{
-    margin-top: 1%;
-    
   }
 
   .texto-muestranos h2{
