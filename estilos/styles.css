@@ -736,7 +736,7 @@
 .contenedor-vosotras {
 
     width: 100%;
-    height: auto;
+    height: 60vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     gap: 1.5rem; /* Espacio entre columnas */
@@ -781,6 +781,41 @@ video {
     height: 50%;
     aspect-ratio: 16/9;
 }
+
+@media screen and (max-width: 768px) {
+  .contenedor-vosotras {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(2, 1fr); /* Dos filas */
+    gap: 1rem;
+    height: 80vh; /* Ocupa toda la pantalla */
+    padding: 1rem;
+  }
+
+  .cont-vosotras-videos {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* Ajustar el contenedor con cuatro videos en móviles */
+  .cuatro-videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(2, 1fr); /* Dos filas */
+    gap: 0.5rem;
+  }
+
+  /* Asegurar que los videos llenen sus contenedores */
+  video {
+    width: 100%;
+    height: auto;
+    max-height: 45vh; /* Ajuste dinámico para móviles */
+  }
+}
+
+
+
 
 
 
