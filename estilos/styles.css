@@ -889,13 +889,6 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 1024px) {
-    .contenedor-combi {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
-        grid-template-rows: repeat(3, 1fr); /* Ajustamos las filas */
-        height: auto;
-    }
-}
 
 @media screen and (max-width: 768px) {
     .contenedor-combi {
