@@ -916,12 +916,12 @@
 @media screen and (max-width: 768px) {
     .contenedor-combi {
         grid-template-columns: repeat(3, 1fr); 
-        gap: 0.8rem;
-        padding: 1rem;
+        gap: 0.5rem;
+        padding: 0;
     }
 
     .combi {
-        flex-direction: column; /* Mantener las imágenes apiladas dentro de cada columna */
+        flex-direction:column; /* Mantener las imágenes apiladas dentro de cada columna */
         align-items: center;
         justify-content: center;
         height: auto;
@@ -931,6 +931,14 @@
         width: 100%;
         height: auto;
     }
+
+    .texto-muestranos h2{
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: #c6937f;
+}
 }
 
 
