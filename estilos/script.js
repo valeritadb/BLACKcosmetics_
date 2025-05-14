@@ -60,7 +60,7 @@ window.onload = function() {
             overlay.classList.add('mostrar');
 
             sessionStorage.setItem('popupMostrado', "true");
-        }, 4000);
+        }, 7000);
     }
 };
 
