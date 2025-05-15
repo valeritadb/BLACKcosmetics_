@@ -1039,3 +1039,104 @@
         padding: 0.6rem 1.2rem; 
     }
   }
+
+/*DISEÑO DEL FOOTER*/
+.footer{
+  width: 100%;
+  height: 55%;
+  background-color: #fff;
+  color: black;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+.footer-contenido h2{
+  font-size: 2rem;
+  line-height: 4.5rem;
+}
+
+.footer-contenido p{
+  line-height: 4.5rem;
+}
+.footer-contenido span{
+  line-height: 4rem;
+  font-size: 0.6rem;
+  color: gray;
+}
+.footer-contenido input{
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.footer-redes,
+.footer-links,
+.footer-legal {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Que ocupen todo el ancho disponible */
+    text-align: center; /* Asegurar que el contenido se vea bien */
+}
+
+
+.footer-redes{
+  display: flex;
+  gap: 2rem;
+  
+}
+
+.footer-redes a{
+  color: #c6937f;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-redes a:hover{
+  color: #975a42;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  line-height: 4rem;
+ 
+}
+.footer-links a{
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+
+.footer-legal {
+  
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+
+  
+}
+
+.footer-legal a{
+  text-decoration: none;
+  color: gray;
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.footer-links a:hover, .footer-legal a:hover {
+    color: #c6937f;
+}
