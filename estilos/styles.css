@@ -1096,13 +1096,13 @@
 
 .footer-redes{
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   
 }
 
 .footer-redes a{
   color: #c6937f;
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   transition: 0.3s;
   text-align: center;
   align-items: center;
