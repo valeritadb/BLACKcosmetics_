@@ -87,6 +87,20 @@
     position: fixed;
   }
 
+  /*HEADER DE OTRAS PÁGINAS*/
+  #second-header{
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+  }
+  #second-header a{
+    
+    color: black;
+  }
+
+  .secundario{
+    height: 15vh;
+  }
+
   .scrolled{
     background-color: white;
     color: black;
@@ -1226,4 +1240,107 @@
     }
 }
 
+/*Estilos de la seccion About Us*/
+.seccion-unoYdos{
+  display: flex;
+  gap: 1rem
+  ;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:nowrap;
+  padding: 3rem;
+}
 
+.primera-seccion{
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 70%;
+  height: 110vh;
+  display: grid;
+  background-color: yellow;
+  gap: 3rem;
+}
+
+.primera-img{
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  height: 70vh;
+  width: 100%;
+}
+
+.primera-img img{
+  background-color: purple;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.primer-content{
+  background-color: green;
+}
+
+.segunda-seccion{
+  display: grid;
+  background-color: yellow;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+  height: 110vh;
+  gap: 3rem;
+}
+
+.segundo-content{
+  background-color: green;
+}
+
+.segunda-img{
+  background-color: red;
+    
+}
+
+.segunda-img img{
+  background-color: purple;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tercera-seccion{
+  background-color: yellow;
+  padding: 2rem;
+}
+.tercera-img{
+  background-color: red;
+  width: 100%;
+  height: 110vh;
+}
+
+.tercera-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tercer-content{
+  background-color: green;
+}
+
+/*ESTILOS DE EL AVISO LEGAL*/
+.avisoLegal{
+  text-align: center;
+  padding: 10rem;
+  font-family: 'Quicksand', sans-serif;
+  padding-bottom: 2rem;
+}
+.avisoLegal h2{
+  color: #c6937f;
+}
+.avisoLegal p{
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
