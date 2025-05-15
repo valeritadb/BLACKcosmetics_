@@ -1080,7 +1080,7 @@
   max-width: 400px;
   padding: 0.5rem;
   border: 1px solid black;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
 }
 
 .footer-redes,
@@ -1151,3 +1151,62 @@
 .footer-legal a:hover{
   color: gray;
 }
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        height: auto; 
+        padding: 1.5rem;
+    }
+
+    .footer-contenido h2 {
+        font-size: 1.8rem; 
+        line-height: 3rem;
+    }
+
+    .footer-contenido p {
+        line-height: 3rem;
+    }
+
+    .footer-contenido input {
+        max-width: 350px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .footer-contenido h2 {
+        font-size: 1.5rem; 
+        line-height: 2.3rem;
+    }
+
+    .footer-contenido p {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .footer-contenido span{
+      font-size: 0.55rem;
+    }
+
+    .footer-contenido input {
+        max-width: 300px; 
+    }
+    .footer-redes, .footer-links{
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0.5;
+      line-height: 1.8rem;
+    }
+
+     .footer-legal {
+        flex-direction: column; /* Apilar en móviles */
+        gap: 0.05rem;
+    }
+}
+
+
