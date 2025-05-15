@@ -1055,6 +1055,7 @@
   align-items: center;
   gap: 3rem;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .footer-contenido h2{
@@ -1069,6 +1070,10 @@
   line-height: 4rem;
   font-size: 0.6rem;
   color: gray;
+}
+
+.footer-contenido span a{
+  color: black;
 }
 .footer-contenido input{
   width: 100%;
@@ -1133,13 +1138,16 @@
 }
 
 .footer-legal a{
-  text-decoration: none;
-  color: gray;
+  color: black;
   text-align: center;
   align-items: center;
-  border-bottom: 1px solid gray;
+  line-height: 3rem;
 }
 
-.footer-links a:hover, .footer-legal a:hover {
+.footer-links a:hover {
     color: #c6937f;
+}
+
+.footer-legal a:hover{
+  color: gray;
 }
