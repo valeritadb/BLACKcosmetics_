@@ -769,11 +769,11 @@
 
 .contenedor-vosotras {
     width: 100%;
-    height: 80vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     gap: 1.5rem; /* Espacio entre columnas */
     padding: 3rem;
+    
 
 }
 
@@ -782,6 +782,8 @@
     flex-direction: column;
     gap: 0.8rem; /* Espacio entre videos */
     height: 100%;
+    width: 100%;
+    
 }
 
 /* Establecemos el contenedor con 4 videos en 2x2 */
@@ -795,10 +797,10 @@
 /*todos los videos verticales excepto el bloque con dos videos */
  .cont-vosotras-videos video {
     width: 100%;
-    height: 100%;
     border-radius: 0.5rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    object-fit: cover;
 }
  .cont-vosotras-videos video:hover{
   transform: scale(1.02);
