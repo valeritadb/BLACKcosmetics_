@@ -1192,20 +1192,26 @@
     }
     .footer-contenido span{
       font-size: 0.55rem;
+      line-height: 3rem;
     }
 
     .footer-contenido input {
         max-width: 300px; 
     }
-    .footer-redes, .footer-links{
+    .footer-redes{
       grid-template-columns: repeat(1, 1fr);
       gap: 0.5;
-      line-height: 1.8rem;
+      line-height: 3rem;
+    }
+    .footer-links{
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0.5;
+      line-height: 1rem;
     }
 
      .footer-legal {
         flex-direction: column; /* Apilar en móviles */
-        gap: 0.05rem;
+        gap: 0.01rem;
     }
 }
 
