@@ -1060,7 +1060,7 @@
 
 .footer-contenido h2{
   font-size: 2rem;
-  line-height: 4.5rem;
+  line-height: 2.5rem;
 }
 
 .footer-contenido p{
@@ -1125,6 +1125,7 @@
   align-items: center;
   text-align: center;
   color: black;
+  font-weight: bold;
 }
 
 .footer-legal {
