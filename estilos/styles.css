@@ -830,6 +830,9 @@
     height: 100vh; /* Ocupa toda la pantalla */
     padding: 1rem;
   }
+  .cont-vosotras-videos:nth-child(2) {
+    height: 77%;
+}
 
   .cont-vosotras-videos {
     display: flex;
@@ -842,7 +845,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     grid-template-rows: repeat(2, 1fr); /* Dos filas */
-    gap: 0.5rem;
+    gap: 0.4rem;
+    height: 77%;
   }
 
   /* Asegurar que los videos llenen sus contenedores */
