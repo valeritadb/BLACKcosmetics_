@@ -440,8 +440,11 @@
   float: left;
   text-align: left;
   font-size: 0.7rem;
-  list-style: circle;
+  color: gray;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 1rem;
 }
+
 
 #boton-popup{
   background-color: black;
