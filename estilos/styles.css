@@ -132,6 +132,10 @@
   .iconos-usuario a:hover{
     color: #c6937f;
   }
+  #second-header .iconos-usuario a:hover{
+    color: #c6937f;
+  }
+
 
   /*MEDIA QUERY PARA PANTALLA DE TELEFONOS*/
   @media screen and (max-width: 768px) {
