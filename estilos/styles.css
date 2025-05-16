@@ -364,7 +364,7 @@
 /*POP UP*/
 .popup {
 
-    display: flex;
+    display: grid;
     visibility: hidden;
     flex-direction: row;
     gap: 0;
@@ -422,6 +422,7 @@
   border-top-left-radius: 1rem;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   
 }
 
@@ -509,48 +510,52 @@
 
 @media screen and (max-width: 768px) {
   .popup {
-    flex-direction: column; /* Apilar elementos */
+    flex-direction: column;
     width: 90%;
     height: auto;
+    max-height: 80vh; /* Limitar altura para que no sobrepase la pantalla */
     padding: 1rem;
+    overflow-y: auto; /* Habilitar scroll si es necesario */
   }
 
   .img-popup {
     width: 100%;
-    height: auto;
-    border-radius: 1rem 1rem 0 0; /* Ajuste de bordes */
+    height: 30vh; /* Reducir tamaño de la imagen */
+    border-radius: 1rem 1rem 0 0;
   }
 
   .content-popup {
     width: 100%;
-    padding: 1rem;
+    padding: 0.8rem;
   }
 
   .popup h2 {
-    font-size: 2rem; /* Reducir tamaño del título */
+    font-size: 1.8rem; /* Ajuste del título */
   }
 
   .popup ul {
-    font-size: 0.9rem; /* Reducir tamaño del texto */
-    margin-left: 0; /* Ajustar margen */
+    font-size: 0.85rem; /* Ajuste de texto */
+    margin-left: 0;
     text-align: center;
   }
 
   #campo-email {
-    width: 100%; /* Ajustar ancho */
-    font-size: 0.9rem;
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.5rem;
   }
 
   #boton-popup {
     width: 100%;
-    font-size: 0.9rem;
-    padding: 0.4rem;
+    font-size: 0.85rem;
+    padding: 0.5rem;
   }
 
   #boton-popup-cerrar {
     font-size: 0.7rem;
   }
 }
+
 
 /*SCROLL 1 DEL INDEX (MAQUILLAJE)*/
 
@@ -1007,6 +1012,7 @@
 }
 
 .contenido-mensaje p {
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.2rem;
     margin: 1rem 0;
 }
@@ -1525,5 +1531,92 @@
         font-size: 1rem;
         line-height: 1.6rem;
         text-align: justify; /* Mejor legibilidad en pantallas pequeñas */
+    }
+}
+
+/*Estilos de Seccion de contacto*/
+.contacto {
+  font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+
+    
+}
+
+.contacto-container {
+    width: 80%;
+    padding: 2rem;
+    border-radius: 10px;
+    
+    text-align: center;
+}
+
+.contacto-container h2 {
+
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color:#c6937f ;
+}
+
+.fila-doble {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-group {
+    flex: 1; /* Para que ambos campos ocupen el mismo espacio */
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+  font-family: 'Quicksand', sans-serif;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-enviar {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+    width: 50%;
+    padding: 0.8rem;
+    background-color: #000000;
+    color: white;
+    border: 1px solid black;
+    border-radius: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .contacto {
+        padding: 2rem;
+    }
+
+    .contacto-container {
+        max-width: 90%;
+    }
+
+    .fila-doble {
+        flex-direction: column; /* Para que en móviles los campos se apilen */
     }
 }
