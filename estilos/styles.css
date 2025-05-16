@@ -364,7 +364,7 @@
 /*POP UP*/
 .popup {
 
-    display: grid;
+    display: flex;
     visibility: hidden;
     flex-direction: row;
     gap: 0;
