@@ -2114,3 +2114,154 @@
         font-size: 28px;
     }
 }
+
+/* Estilos para la página de detalle de producto */
+
+/* Contenedor principal */
+.producto-detalle-container {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+}
+
+/* Encabezado de la sección */
+.producto-detalle-header {
+    margin-bottom: 30px;
+}
+
+.producto-detalle-header h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #c6937f;
+    margin-bottom: 5px;
+}
+
+/* Cuadrícula de variantes */
+.variantes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Tarjeta de variante */
+.variante-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.variante-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de la variante */
+.variante-imagen {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Relación de aspecto 4:3 */
+    position: relative;
+    overflow: hidden;
+}
+
+.variante-imagen img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.variante-card:hover .variante-imagen img {
+    transform: scale(1.05);
+}
+
+/* Información de la variante */
+.variante-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.variante-info h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.variante-info p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Botón de compra */
+.btn-comprar {
+    background-color: #c6937f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-comprar:hover {
+    background-color: #b68069;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .variantes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .producto-detalle-container {
+        margin-top: 60px;
+        padding: 0 15px;
+    }
+    
+    .producto-detalle-header h2 {
+        font-size: 24px;
+    }
+    
+    .variante-info h3 {
+        font-size: 16px;
+    }
+    
+    .variante-info p {
+        font-size: 13px;
+    }
+    
+    .precio {
+        font-size: 16px;
+    }
+    
+    .btn-comprar {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
+

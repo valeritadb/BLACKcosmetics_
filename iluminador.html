@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
@@ -19,19 +18,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Valeria De Barros">
 
-  <title>Black Cosmetics</title>
+  <title>Black Cosmetics - Iluminador</title>
 
   <link rel="stylesheet" href="estilos/styles.css">
-  <script defer src="estilos/script.js"></script>
 
   <script src="https://kit.fontawesome.com/3696051f79.js" crossorigin="anonymous"></script>
 
+  <script src="estilos/script.js"></script>
 </head>
-
 <body>
-
-  <!-- Contenedor principal -->
-  <header class="header secundario" >
+     <!-- Contenedor principal -->
+  <header class="header secundario">
 
     <!-- Menú de navegación -->
     <nav class="barra-navegacion" id="second-header">
@@ -50,7 +47,7 @@
 
       <!-- Enlaces del menú -->
         <ul class="menu">
-            <li class="has-dropdown">
+          <li class="has-dropdown">
                     <a href="maquillaje.html">MAQUILLAJE</a>
                     <!-- Menú desplegable -->
                     <div class="dropdown-menu">
@@ -72,6 +69,8 @@
                         </div>
                     </div>
                 </li>
+
+            
             <li><a href="#">PERSONALIZA</a></li>
             <li><a href="#contenedor-vosotras">VOSOTRAS</a></li>
             <li><a href="sobreNosotros.html">ABOUT US</a></li>
@@ -90,73 +89,76 @@
     </div>
     </header>
 
-    <!--SECCIONES DEL ABOUT US DIOS MIO POR FAVOR AYUDA-->
-    <div class="seccion-unoYdos">
-        <div class="primera-seccion">
-            <div class="primera-img">
-                <img src="fotos/48.png" alt="48">
-            </div>
-            <div class="primer-content">
-                <h2>Nuestra <span>paleta</span></h2>
-                <p>Entonces pensé: ¿Por qué no puedo tener una paleta con solo lo que realmente quiero? Algo hecho a mi medida, sin colores de relleno. Y así nació Black Cosmetics.</p>
+        <!-- Sección de producto detalle -->
+    <main class="producto-detalle-container">
+        <div class="producto-detalle-header">
+            <h2>ILUMINADOR</h2>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> / <a href="maquillaje.html">Maquillaje</a> / <a href="individual.html">Individual</a> / <span>Iluminador</span>
             </div>
         </div>
 
-        <div class="segunda-seccion">
-            <div class="segundo-content">
-                <h2>¿UN DÍA O <span>el día?</span></h2>
-                <p>Un día, estaba en TikTok y vi un maquillaje increíble. Lo primero que hice fue preguntar: "¿Qué colorete llevas?". La respuesta fue una paleta, pero solo me gustaba un tono. Y no era la primera vez que me pasaba. Siempre faltaba algo o sobraba algo.</p>
+        <div class="variantes-grid">
+            <!-- Variante 1: Melted -->
+            <div class="variante-card">
+                <div class="variante-imagen">
+                    <img src="https://placehold.co/600x400/brown/white" alt="Bronceador Melted">
+                </div>
+                <div class="variante-info">
+                    <h3>Iluminador</h3>
+                    <p>Melted highlighter</p>
+                    <span class="precio">34,99€</span>
+                    <button class="btn-comprar">AÑADIR AL CARRITO</button>
+                </div>
             </div>
-            <div class="segunda-img">
-                <img src="fotos/62.png" alt="62">
+
+            <!-- Variante 2: Velvet -->
+            <div class="variante-card">
+                <div class="variante-imagen">
+                    <img src="https://placehold.co/600x400/sienna/white" alt="Bronceador Velvet">
+                </div>
+                <div class="variante-info">
+                    <h3>Iluminador</h3>
+                    <p>Velvet highlighter</p>
+                    <span class="precio">34,99€</span>
+                    <button class="btn-comprar">AÑADIR AL CARRITO</button>
+                </div>
             </div>
         </div>
+    </main>
+   
+        <!--Footer diosmio ayudame-->
+    <footer class="footer">
+        <div class="footer-contenido">
+        <h2>¡Unete a la lista VIP!</h2>
+        <p>Recibirás ofertas exclusivas, un 10% de descuento en tu primer pedido, novedades y más.</p>
+        <input type="email" placeholder="Email*">
+        <br>
+        <span class="aviso">*Al registrarte aceptas nuestros <a href="">Términos & Condiciones</a> y nuestra <a href="politicaPrivacidad.html">Política de Privacidad</a></span>
 
-    </div>
-
-    <div class="tercera-seccion">
-        <div class="tercer-content">
-            <p>Aquí no hay reglas. Solo tú, tu estilo y lo que realmente necesitas. Bronceadores, coloretes e iluminadores, en crema y en polvo. Y si solo quieres un producto, también puedes llevártelo, sin compromisos.</p>
+        <div class="footer-redes">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
-        <div class="tercera-img"> <!--img como cover-->
-            <img src="fotos/49.png" alt="49">
+
+        <nav class="footer-links">
+            <a href="contacto.html">Contáctanos</a>
+            <a href="condicionesCompra.html">Preguntas frecuentes</a>
+            <a href="condicionesCompra.html">Envíos y devoluciones</a>
+            <a href="sobreNosotros.html">About us</a>
+        </nav>
+
+        <div class="footer-legal">
+            <a href="avisoLegal.html">Aviso legal</a>
+            <a href="politicaPrivacidad.html">Politica de Privacidad</a>
+            <a href="avisoLegal.html">Términos & condiciones</a>
+            <a href="condicionesCompra.html">Condiciones de compra</a>
+            <a href="politicaCookies.html">Política de Cookies</a>
         </div>
-        <h2>No <span>rules</span></h2>
-    </div>
-  <!--Footer diosmio ayudame-->
-  <footer class="footer">   
-    
-    <div class="footer-contenido">
-      <h2>¡Unete a la lista VIP!</h2>
-      <p>Recibirás ofertas exclusivas, un 10% de descuento en tu primer pedido, novedades y más.</p>
-      <input type="email" placeholder="Email*">
-      <br>
-      <span class="aviso">*Al registrarte aceptas nuestros <a href="">Términos & Condiciones</a> y nuestra <a href="politicaPrivacidad.html">Política de Privacidad</a></span>
 
-      <div class="footer-redes">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
-
-      <nav class="footer-links">
-        <a href="contacto.html">Contáctanos</a>
-        <a href="condicionesCompra.html">Preguntas frecuentes</a>
-        <a href="condicionesCompra.html">Envíos y devoluciones</a>
-        <a href="sobreNosotros.html">About us</a>
-      </nav>
-
-      <div class="footer-legal">
-        <a href="avisoLegal.html">Aviso legal</a>
-        <a href="politicaPrivacidad.html">Politica de Privacidad</a>
-        <a href="avisoLegal.html">Términos & condiciones</a>
-        <a href="condicionesCompra.html">Condiciones de compra</a>
-        <a href="politicaCookies.html">Política de Cookies</a>
-      </div>
-
-    </div>
-  </footer>
-
+        </div>
+    </footer>
 </body>
 </html>
