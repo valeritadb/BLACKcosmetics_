@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK. cosmetics - Productos</title>
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="estilos/styles.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Contenedor principal -->
+  <header class="header secundario">
+
+    <!-- Menú de navegación -->
+    <nav class="barra-navegacion" id="second-header">
+        <!-- Iconos de usuario --> 
+        <div class="iconos-usuario">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#"><i class="fa fa-user"></i></a>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-shopping-bag"></i></a>
+        </div>
+
+      <!-- Logo -->
+        <div class="logo">
+            <h1><a href="index.html">BLACK.<span class="subtitulo">cosmetics</span></a></h1>
+        </div>
+
+      <!-- Enlaces del menú -->
+        <ul class="menu">
+          <li class="has-dropdown">
+                    <a href="maquillaje.html">MAQUILLAJE</a>
+                    <!-- Menú desplegable -->
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="category">
+                                <a href="/maquillaje/individual" class="category-title">INDIVIDUAL</a>
+                                <ul>
+                                    <li><a href="/maquillaje/individual/bronceador">Bronceador</a></li>
+                                    <li><a href="/maquillaje/individual/colorete">Colorete</a></li>
+                                    <li><a href="/maquillaje/individual/iluminador">Iluminador</a></li>
+                                </ul>
+                            </div>
+                            <div class="category">
+                                <a href="/maquillaje/paletas" class="category-title">PALETAS</a>
+                            </div>
+                            <div class="category">
+                                <a href="/maquillaje/todo" class="ver-todo">VER TODO</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            
+            <li><a href="#">PERSONALIZA</a></li>
+            <li><a href="#contenedor-vosotras">VOSOTRAS</a></li>
+            <li><a href="sobreNosotros.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cesta de compras -->
+    <div class="overlay-carrito" id="overlay-carrito"></div>
+    <div class="carrito" id="carrito">
+        <span id="cerrar-carrito" class="cerrar">&times;</span>
+        <h2>CESTA</h2>
+        <hr>
+        <ul id="lista-carrito">
+            <!-- Los productos añadidos aparecerán aquí -->
+        </ul>
+    </div>
+    </header>
+
+    <!-- Sección de productos -->
+    <main class="productos-container">
+        <div class="productos-header">
+            <h2>VER TODO</h2>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> / <a href="maquillaje.html">Maquillaje</a> / <span>Ver todo</span>
+            </div>
+        </div>
+
+        <div class="productos-grid">
+            <!-- Producto 1 -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="https://placehold.co/300x300/skyblue/white" alt="Bronceador">
+                    <div class="tonos-badge">+6 tonos</div>
+                </div>
+                <div class="producto-info">
+                    <h3>Bronceador</h3>
+                    <p>Melted bronzer</p>
+                    <span class="precio">34,99€</span>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="https://placehold.co/300x300/pink/white" alt="Colorete">
+                    <div class="tonos-badge">+6 tonos</div>
+                </div>
+                <div class="producto-info">
+                    <h3>Colorete</h3>
+                    <p>Melted blush</p>
+                    <span class="precio">34,99€</span>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="https://placehold.co/300x300/skyblue/white" alt="Iluminador">
+                    <div class="tonos-badge">+6 tonos</div>
+                </div>
+                <div class="producto-info">
+                    <h3>Iluminador</h3>
+                    <p>Melted bronzer</p>
+                    <span class="precio">34,99€</span>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="https://placehold.co/300x300/skyblue/white" alt="Paleta Personalizada">
+                    <div class="tonos-badge">+6 tonos</div>
+                </div>
+                <div class="producto-info">
+                    <h3>Paleta Personalizada</h3>
+                    <p>Custom palette</p>
+                    <span class="precio">49,99€</span>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="https://placehold.co/300x300/pink/white" alt="Paleta Black">
+                    <div class="tonos-badge">+6 tonos</div>
+                </div>
+                <div class="producto-info">
+                    <h3>Paleta Facial</h3>
+                    <p>Face Palette</p>
+                    <span class="precio">39,99€</span>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="producto-card">
+                <div class="producto-imagen">
+                    <img src="https://placehold.co/300x300/skyblue/white" alt="Corrector">
+                    <div class="tonos-badge">+6 tonos</div>
+                </div>
+                <div class="producto-info">
+                    <h3>Set de brochas</h3>
+                    <p>Professional brush set</p>
+                    <span class="precio">29,99€</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+        <!--Footer diosmio ayudame-->
+    <footer class="footer">
+        <div class="footer-contenido">
+        <h2>¡Unete a la lista VIP!</h2>
+        <p>Recibirás ofertas exclusivas, un 10% de descuento en tu primer pedido, novedades y más.</p>
+        <input type="email" placeholder="Email*">
+        <br>
+        <span class="aviso">*Al registrarte aceptas nuestros <a href="">Términos & Condiciones</a> y nuestra <a href="politicaPrivacidad.html">Política de Privacidad</a></span>
+
+        <div class="footer-redes">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <nav class="footer-links">
+            <a href="contacto.html">Contáctanos</a>
+            <a href="condicionesCompra.html">Preguntas frecuentes</a>
+            <a href="condicionesCompra.html">Envíos y devoluciones</a>
+            <a href="sobreNosotros.html">About us</a>
+        </nav>
+
+        <div class="footer-legal">
+            <a href="avisoLegal.html">Aviso legal</a>
+            <a href="politicaPrivacidad.html">Politica de Privacidad</a>
+            <a href="avisoLegal.html">Términos & condiciones</a>
+            <a href="condicionesCompra.html">Condiciones de compra</a>
+            <a href="politicaCookies.html">Política de Cookies</a>
+        </div>
+
+        </div>
+    </footer>
+</body>
+</html>
