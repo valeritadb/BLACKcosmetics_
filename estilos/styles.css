@@ -241,7 +241,8 @@
   @media screen and (max-width: 768px) {
     .menu a {
       font-size: 15px;
-      padding: 0.3rem;
+      padding: 0.1rem;
+      
     }
     .menu{
       gap: 2px;
@@ -1701,7 +1702,7 @@
 
 .category ul {
     display: flex;
-    flex-direction: row; /* Mostrar subcategorías en fila */
+    flex-direction: column; /* Mostrar subcategorías en fila */
     flex-wrap: wrap; /* Permitir que se envuelvan */
     justify-content: flex-start; /* Alinear a la izquierda */
     gap: 20px; /* Espacio entre elementos */
