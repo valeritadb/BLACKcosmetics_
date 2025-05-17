@@ -1980,3 +1980,137 @@
         font-size: 24px;
     }
 }
+
+/* Estilos para la sección de categorías */
+
+/* Contenedor principal */
+.categorias-container {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+}
+
+/* Encabezado de la sección */
+.categorias-header {
+    margin-bottom: 30px;
+}
+
+.categorias-header h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #c6937f;
+    margin-bottom: 5px;
+}
+
+.breadcrumb {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    color: #999;
+}
+
+.breadcrumb a {
+    color: #999;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #c6937f;
+}
+
+/* Cuadrícula de categorías */
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Tarjeta de categoría */
+.categoria-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.categoria-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de la categoría */
+.categoria-imagen {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Relación de aspecto 4:3 */
+    overflow: hidden;
+}
+
+.categoria-imagen img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.categoria-card:hover .categoria-imagen img {
+    transform: scale(1.05);
+}
+
+/* Overlay con título */
+.categoria-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.categoria-card:hover .categoria-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.categoria-overlay h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .categorias-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .categorias-container {
+        margin-top: 60px;
+        padding: 0 15px;
+    }
+    
+    .categorias-header h2 {
+        font-size: 24px;
+    }
+    
+    .categoria-overlay h3 {
+        font-size: 28px;
+    }
+}
