@@ -283,7 +283,7 @@
 }
 
 .subtitulo-hero{
-    font-family: "Birthstone Bounce", cursive;
+    font-family: "Nothing You Could Do", cursive;
     font-weight: 300;
     font-size: 40px;
 }
@@ -1014,7 +1014,7 @@
 .contenido-mensaje span{
 
   margin-top: 1rem;
-  font-family: "Birthstone Bounce", cursive;
+  font-family: "Nothing You Could Do", cursive;
   color:#c6937f;
   letter-spacing: 0.2rem;
 }
@@ -1316,7 +1316,7 @@
 }
 
 .primer-content span{
-  font-family: "Birthstone Bounce", cursive;
+  font-family: "Nothing You Could Do", cursive;
   font-size: 3rem;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -1350,7 +1350,7 @@
 }
 
 .segundo-content span{
-  font-family: "Birthstone Bounce", cursive;
+  font-family: "Nothing You Could Do", cursive;
   font-size: 3rem;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -1425,7 +1425,7 @@
 
 .tercera-seccion span{
   cursor: default;
-  font-family: "Birthstone Bounce", cursive;
+  font-family: "Nothing You Could Do", cursive;
   font-size: 4rem;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -1892,6 +1892,7 @@
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .producto-card a{
@@ -1900,7 +1901,7 @@
 
 .producto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Imagen del producto */
@@ -2039,16 +2040,18 @@
 
 /* Tarjeta de categoría */
 .categoria-card {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     color: inherit;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border: solid 0.5px rgb(240, 240, 240);
 }
 
 .categoria-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(0.1rem);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -2085,22 +2088,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
 .categoria-card:hover .categoria-overlay {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .categoria-overlay h3 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-size: 32px;
-    font-weight: 700;
-    color: white;
+    font-weight: 500;
+    color: rgb(243, 242, 242);
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
 
 
