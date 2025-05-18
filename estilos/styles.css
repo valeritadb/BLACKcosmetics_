@@ -1,28 +1,22 @@
 .anton-regular {
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  .quicksand {
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: auto;
-    font-style: normal;
-  }
 
-  .birthstone-bounce-regular {
-    font-family: "Birthstone Bounce", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .birthstone-bounce-medium {
-    font-family: "Birthstone Bounce", cursive;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.nothing-you-could-do-regular {
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* Reset básico */
 *{
