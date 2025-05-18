@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Valeria De Barros">
+
+  <title>Bronceador Velvet - Black.</title>
+
+  <link rel="stylesheet" href="/estilos/styles.css">
+
+  <script src="https://kit.fontawesome.com/3696051f79.js" crossorigin="anonymous"></script>
+
+  <script src="/estilos/script.js"></script>
+</head>
+<body>
+     <!-- Contenedor principal -->
+  <header class="header secundario">
+
+    <!-- Menú de navegación -->
+    <nav class="barra-navegacion" id="second-header">
+        <!-- Iconos de usuario --> 
+        <div class="iconos-usuario">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#"><i class="fa fa-user"></i></a>
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-shopping-bag"></i></a>
+        </div>
+
+      <!-- Logo -->
+        <div class="logo">
+            <h1><a href="/index.html">BLACK.<span class="subtitulo">cosmetics</span></a></h1>
+        </div>
+
+      <!-- Enlaces del menú -->
+        <ul class="menu">
+          <li class="has-dropdown">
+                    <a href="/maquillaje.html">MAQUILLAJE</a>
+                    <!-- Menú desplegable -->
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="category">
+                                <a href="/individual.html" class="category-title">INDIVIDUAL</a>
+                                <ul>
+                                    <li><a href="/bronceador.html">Bronceador</a></li>
+                                    <li><a href="/colorete.html">Colorete</a></li>
+                                    <li><a href="/iluminador.html">Iluminador</a></li>
+                                </ul>
+                            </div>
+                            <div class="category">
+                                <a href="/paletas.html" class="category-title">PALETAS</a>
+                            </div>
+                            <div class="category">
+                                <a href="/maquillaje.html" class="ver-todo">VER TODO</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            
+            <li><a href="#">PERSONALIZA</a></li>
+            <li><a href="/index.html">VOSOTRAS</a></li>
+            <li><a href="/sobreNosotros.html">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cesta de compras -->
+    <div class="overlay-carrito" id="overlay-carrito"></div>
+    <div class="carrito" id="carrito">
+        <span id="cerrar-carrito" class="cerrar">&times;</span>
+        <h2>CESTA</h2>
+        <hr>
+        <ul id="lista-carrito">
+            <!-- Los productos añadidos aparecerán aquí -->
+        </ul>
+    </div>
+    </header>
+    <BR></BR>
+        <!-- Ficha de producto -->
+    <main class="ficha-producto-container">
+        <div class="ficha-producto">
+            <!-- Galería de imágenes -->
+            <div class="producto-galeria">
+                <button class="galeria-nav prev"><i class="fa fa-chevron-left"></i></button>
+                <div class="galeria-imagen">
+                    <img id="producto-imagen" src="/fotos/BV1.png" alt="Producto">
+                </div>
+                <button class="galeria-nav next"><i class="fa fa-chevron-right"></i></button>
+            </div>
+
+            <!-- Información del producto -->
+            <div class="producto-info">
+                <div class="producto-header">
+                    <h1 id="producto-nombre">Velvet bronzer</h1>
+                    <button class="btn-favorito"><i class="fa fa-heart-o"></i></button>
+                </div>
+                <div class="producto-precio" id="producto-precio">34,99€</div>
+                <div class="producto-descripcion" id="producto-descripcion">
+                    Bronceador en polvo, suave y con textura ligera que se funde perfectamente con la piel para un resultado saludable y un maquillaje natural.
+                </div>
+
+                <!-- Selector de color -->
+                <div class="producto-color">
+                    <div class="color-label">SOMBRA: <span id="color-seleccionado">Sandstorm</span></div>
+                    <div class="color-opciones">
+                        <button class="color-opcion" style="background-color: #f5c397;" data-color="Cabo" title="Cabo"></button>
+                        <button class="color-opcion active" style="background-color: #bc9680;" data-color="Sandstorm" title="Sandstorm"></button>
+                        <button class="color-opcion" style="background-color: #dd9e76;" data-color="Mirage" title="Mirage"></button>
+                        <button class="color-opcion" style="background-color: #b57658;" data-color="Bali" title="Bali"></button>
+                        <button class="color-opcion" style="background-color: #89573b;" data-color="Desert heat" title="Desert heat"></button>
+                        <button class="color-opcion" style="background-color: #633e2f;" data-color="Tierra" title="Tierra"></button>
+                    </div>
+                </div>
+
+                <!-- Selector de cantidad -->
+                <div class="producto-cantidad">
+                    <button class="cantidad-btn menos">-</button>
+                    <input type="number" value="1" min="1" max="10" class="cantidad-input">
+                    <button class="cantidad-btn mas">+</button>
+                </div>
+
+                <!-- Botón de compra -->
+                <button class="btn-comprar">Añadir a la cesta</button>
+            </div>
+        </div>
+
+        <!-- Sección de reseñas -->
+        <div class="resenas-container">
+            <div class="resenas-header">
+                <h2>RESEÑAS</h2>
+                <div class="rating-general">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <button class="btn-escribir-resena">Escribe la tuya!</button>
+            </div>
+
+            <!-- Lista de reseñas -->
+            <div class="resenas-lista">
+                <!-- Reseña 1 -->
+                <div class="resena-item">
+                    <div class="resena-meta">
+                        <div class="resena-fecha">Enviado 29/04/2023</div>
+                        <div class="resena-autor">por Patricia</div>
+                    </div>
+                    <div class="resena-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="resena-titulo">¡Me encanta!</div>
+                    <div class="resena-texto">
+                        Este bronceador es lo que perfecto.
+                    </div>
+                    <div class="resena-producto">
+                        <strong>Producto:</strong> Velvet bronzer (Cabo)
+                    </div>
+                </div>
+
+                <!-- Reseña 2 -->
+                <div class="resena-item">
+                    <div class="resena-meta">
+                        <div class="resena-fecha">Enviado 25/04/2023</div>
+                        <div class="resena-autor">por Ana</div>
+                    </div>
+                    <div class="resena-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <div class="resena-titulo">¡Precioso!</div>
+                    <div class="resena-texto">
+                        Un brozer que es genial, super suave y con un tono increíble.
+                    </div>
+                    <div class="resena-producto">
+                        <strong>Producto:</strong> Velvet bronzer (Mirage)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de reseña -->
+            <div class="resena-form-container" id="resena-form">
+                <h3>Deja tu opinión</h3>
+                <form class="resena-form">
+                    <div class="form-group">
+                        <label for="resena-nombre">Nombre:</label>
+                        <input type="text" id="resena-nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resena-email">Email:</label>
+                        <input type="email" id="resena-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Valoración:</label>
+                        <div class="rating-selector">
+                            <i class="fa fa-star-o" data-rating="1"></i>
+                            <i class="fa fa-star-o" data-rating="2"></i>
+                            <i class="fa fa-star-o" data-rating="3"></i>
+                            <i class="fa fa-star-o" data-rating="4"></i>
+                            <i class="fa fa-star-o" data-rating="5"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="resena-titulo">Título:</label>
+                        <input type="text" id="resena-titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resena-comentario">Comentario:</label>
+                        <textarea id="resena-comentario" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar-resena">Enviar reseña</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Variables para los elementos del DOM
+    const colorOptions = document.querySelectorAll('.color-opcion');
+    const colorSelected = document.getElementById('color-seleccionado');
+    const quantityInput = document.querySelector('.cantidad-input');
+    const minusBtn = document.querySelector('.cantidad-btn.menos');
+    const plusBtn = document.querySelector('.cantidad-btn.mas');
+    const favoriteBtn = document.querySelector('.btn-favorito');
+    const writeReviewBtn = document.querySelector('.btn-escribir-resena');
+    const reviewForm = document.getElementById('resena-form');
+    const ratingStars = document.querySelectorAll('.rating-selector i');
+    const reviewFormElement = document.querySelector('.resena-form');
+    
+    // Selector de color
+    colorOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            // Quitar clase active de todas las opciones
+            colorOptions.forEach(opt => opt.classList.remove('active'));
+            
+            // Añadir clase active a la opción seleccionada
+            this.classList.add('active');
+            
+            // Actualizar el texto del color seleccionado
+            const colorName = this.getAttribute('data-color');
+            colorSelected.textContent = colorName;
+        });
+    });
+    
+    // Selector de cantidad
+    minusBtn.addEventListener('click', function() {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+    
+    plusBtn.addEventListener('click', function() {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue < 10) {
+            quantityInput.value = currentValue + 1;
+        }
+    });
+    
+    // Validar entrada manual de cantidad
+    quantityInput.addEventListener('change', function() {
+        let value = parseInt(this.value);
+        if (isNaN(value) || value < 1) {
+            this.value = 1;
+        } else if (value > 10) {
+            this.value = 10;
+        }
+    });
+    
+    // Botón de favorito
+    favoriteBtn.addEventListener('click', function() {
+        const icon = this.querySelector('i');
+        if (icon.classList.contains('fa-heart-o')) {
+            icon.classList.remove('fa-heart-o');
+            icon.classList.add('fa-heart');
+            icon.style.color = '#c6937f';
+        } else {
+            icon.classList.remove('fa-heart');
+            icon.classList.add('fa-heart-o');
+            icon.style.color = '';
+        }
+    });
+    
+    // Botón de escribir reseña
+    writeReviewBtn.addEventListener('click', function() {
+        reviewForm.scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    // Selector de estrellas para la reseña
+    ratingStars.forEach(star => {
+        star.addEventListener('click', function() {
+            const rating = parseInt(this.getAttribute('data-rating'));
+            
+            // Actualizar las estrellas según la valoración seleccionada
+            ratingStars.forEach((s, index) => {
+                if (index < rating) {
+                    s.classList.remove('fa-star-o');
+                    s.classList.add('fa-star');
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('fa-star');
+                    s.classList.add('fa-star-o');
+                    s.classList.remove('active');
+                }
+            });
+        });
+        
+        // Efecto hover
+        star.addEventListener('mouseenter', function() {
+            const rating = parseInt(this.getAttribute('data-rating'));
+            
+            ratingStars.forEach((s, index) => {
+                if (index < rating) {
+                    s.classList.remove('fa-star-o');
+                    s.classList.add('fa-star');
+                } else {
+                    s.classList.remove('fa-star');
+                    s.classList.add('fa-star-o');
+                }
+            });
+        });
+    });
+    
+    // Restaurar estrellas al quitar el hover
+    const ratingSelector = document.querySelector('.rating-selector');
+    ratingSelector.addEventListener('mouseleave', function() {
+        ratingStars.forEach(s => {
+            if (s.classList.contains('active')) {
+                s.classList.remove('fa-star-o');
+                s.classList.add('fa-star');
+            } else {
+                s.classList.remove('fa-star');
+                s.classList.add('fa-star-o');
+            }
+        });
+    });
+    
+    // Envío del formulario de reseña
+    reviewFormElement.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        alert('¡Gracias por tu reseña! Se ha enviado correctamente.');
+        
+        // Limpiar el formulario
+        this.reset();
+        
+        // Resetear las estrellas
+        ratingStars.forEach(s => {
+            s.classList.remove('fa-star', 'active');
+            s.classList.add('fa-star-o');
+        });
+    });
+    
+    // Simulación de galería de imágenes
+    const prevBtn = document.querySelector('.galeria-nav.prev');
+    const nextBtn = document.querySelector('.galeria-nav.next');
+    const productImage = document.getElementById('producto-imagen');
+    
+    // Array de imágenes de ejemplo 
+    const imagenes = [
+        '/fotos/BV1.png',
+        '/fotos/BV2.png',
+        '/fotos/BV3.png',
+        '/fotos/BV4.png',
+        '/fotos/BV5.png',
+        '/fotos/BV6.png'
+    ];
+    
+    let currentImageIndex = 0;
+    
+    prevBtn.addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex - 1 + imagenes.length) % imagenes.length;
+        productImage.src = imagenes[currentImageIndex];
+    });
+    
+    nextBtn.addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex + 1) % imagenes.length;
+        productImage.src = imagenes[currentImageIndex];
+    });
+});
+    </script>
+   
+        <!--Footer diosmio ayudame-->
+    <footer class="footer">
+        <div class="footer-contenido">
+        <h2>¡Unete a la lista VIP!</h2>
+        <p>Recibirás ofertas exclusivas, un 10% de descuento en tu primer pedido, novedades y más.</p>
+        <input type="email" placeholder="Email*">
+        <br>
+        <span class="aviso">*Al registrarte aceptas nuestros <a href="">Términos & Condiciones</a> y nuestra <a href="politicaPrivacidad.html">Política de Privacidad</a></span>
+
+        <div class="footer-redes">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <nav class="footer-links">
+            <a href="/contacto.html">Contáctanos</a>
+            <a href="/condicionesCompra.html">Preguntas frecuentes</a>
+            <a href="/condicionesCompra.html">Envíos y devoluciones</a>
+            <a href="/sobreNosotros.html">About us</a>
+        </nav>
+
+        <div class="footer-legal">
+            <a href="/avisoLegal.html">Aviso legal</a>
+            <a href="/politicaPrivacidad.html">Politica de Privacidad</a>
+            <a href="/avisoLegal.html">Términos & condiciones</a>
+            <a href="/condicionesCompra.html">Condiciones de compra</a>
+            <a href="/politicaCookies.html">Política de Cookies</a>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
