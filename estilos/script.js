@@ -13,23 +13,118 @@ window.addEventListener("scroll", function(){
     }
 });
 
-document.addEventListener("DOMContentLoaded", function(){
-    var popupCookies = document.getElementById("popup-cookies");
-    var aceptarCookies = document.getElementById("aceptar-cookies");
-    var rechazarCookies = document.getElementById("rechazar-cookies");
-
-     // Mostrar la ventana solo si el usuario no ha aceptado cookies
-    if (!sessionStorage.getItem("cookiesAccepted")) {
-        popupCookies.style.display = "flex";
+document.addEventListener('DOMContentLoaded', function() {
+    // Elementos del DOM
+    const cookiesBanner = document.getElementById('popup-cookies');
+    const btnAceptar = document.getElementById('aceptar-cookies');
+    const btnRechazar = document.getElementById('rechazar-cookies');
+    const btnPersonalizar = document.querySelectorAll('#rechazar-cookies')[1]; // El tercer botón es "Personalizar"
+    
+    const popupPreferencias = document.getElementById('popup-preferencias-cookies');
+    const btnGuardarPreferencias = document.getElementById('guardar-preferencias');
+    const btnCerrarPreferencias = document.getElementById('cerrar-preferencias');
+    
+    const checkboxAnaliticas = document.getElementById('cookies-analiticas');
+    const checkboxPersonalizacion = document.getElementById('cookies-personalizacion');
+    const checkboxMarketing = document.getElementById('cookies-marketing');
+    
+    // Comprobar si ya se han aceptado las cookies
+    const cookiesAceptadas = localStorage.getItem('cookiesAceptadas');
+    const preferenciasGuardadas = localStorage.getItem('preferenciasGuardadas');
+    
+    // Si no se han aceptado las cookies, mostrar el banner
+    if (!cookiesAceptadas && !preferenciasGuardadas) {
+        cookiesBanner.style.display = 'flex';
     }
-
-    aceptarCookies.addEventListener("click", function() {
-        sessionStorage.setItem("cookiesAccepted", "true");
-        popupCookies.style.display = "none";
+    
+    // Si hay preferencias guardadas, cargarlas
+    if (preferenciasGuardadas) {
+        const preferencias = JSON.parse(preferenciasGuardadas);
+        checkboxAnaliticas.checked = preferencias.analiticas;
+        checkboxPersonalizacion.checked = preferencias.personalizacion;
+        checkboxMarketing.checked = preferencias.marketing;
+    }
+    
+    // Función para aceptar todas las cookies
+    function aceptarCookies() {
+        localStorage.setItem('cookiesAceptadas', 'true');
+        cookiesBanner.style.display = 'none';
+        
+        // Guardar todas las preferencias como aceptadas
+        const todasPreferencias = {
+            analiticas: true,
+            personalizacion: true,
+            marketing: true
+        };
+        localStorage.setItem('preferenciasGuardadas', JSON.stringify(todasPreferencias));
+        
+        // Actualizar los checkboxes
+        checkboxAnaliticas.checked = true;
+        checkboxPersonalizacion.checked = true;
+        checkboxMarketing.checked = true;
+        
+        console.log('Todas las cookies han sido aceptadas');
+    }
+    
+    // Función para rechazar todas las cookies excepto las necesarias
+    function rechazarCookies() {
+        localStorage.setItem('cookiesAceptadas', 'false');
+        cookiesBanner.style.display = 'none';
+        
+        // Guardar todas las preferencias como rechazadas (excepto las necesarias)
+        const preferenciasRechazadas = {
+            analiticas: false,
+            personalizacion: false,
+            marketing: false
+        };
+        localStorage.setItem('preferenciasGuardadas', JSON.stringify(preferenciasRechazadas));
+        
+        // Actualizar los checkboxes
+        checkboxAnaliticas.checked = false;
+        checkboxPersonalizacion.checked = false;
+        checkboxMarketing.checked = false;
+        
+        console.log('Todas las cookies han sido rechazadas (excepto las necesarias)');
+    }
+    
+    // Función para guardar las preferencias personalizadas
+    function guardarPreferencias() {
+        const preferenciasPersonalizadas = {
+            analiticas: checkboxAnaliticas.checked,
+            personalizacion: checkboxPersonalizacion.checked,
+            marketing: checkboxMarketing.checked
+        };
+        
+        localStorage.setItem('preferenciasGuardadas', JSON.stringify(preferenciasPersonalizadas));
+        localStorage.setItem('cookiesAceptadas', 'personalizado');
+        
+        popupPreferencias.style.display = 'none';
+        cookiesBanner.style.display = 'none';
+        
+        console.log('Preferencias de cookies guardadas:', preferenciasPersonalizadas);
+    }
+    
+    // Event Listeners
+    btnAceptar.addEventListener('click', aceptarCookies);
+    btnRechazar.addEventListener('click', rechazarCookies);
+    
+    // Mostrar popup de preferencias al hacer clic en "Personalizar"
+    btnPersonalizar.addEventListener('click', function() {
+        cookiesBanner.style.display = 'none';
+        popupPreferencias.style.display = 'flex';
     });
-
-    rechazarCookies.addEventListener("click", function() {
-        popupCookies.style.display = "none"; // Solo oculta la ventana sin guardar nada
+    
+    // Guardar preferencias
+    btnGuardarPreferencias.addEventListener('click', guardarPreferencias);
+    
+    // Cerrar popup de preferencias sin guardar
+    btnCerrarPreferencias.addEventListener('click', function() {
+        popupPreferencias.style.display = 'none';
+        
+        // Si no hay preferencias guardadas, volver a mostrar el banner
+        if (!localStorage.getItem('preferenciasGuardadas')) {
+            cookiesBanner.style.display = 'flex';
+        }
     });
 });
 //-------------------------------------------------------------------------------------

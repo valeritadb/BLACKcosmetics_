@@ -62,7 +62,7 @@
                                 </ul>
                             </div>
                             <div class="category">
-                                <a href="paletas.html" class="category-title">PALETAS</a>
+                                <a href="paletaF.html" class="category-title">PALETAS</a>
                             </div>
                             <div class="category">
                                 <a href="maquillaje.html" class="ver-todo">VER TODO</a>
@@ -95,7 +95,7 @@
     <!-- Contenido principal (hero) -->
     <div class="contenido-principal">
       <h2 class="titulo-hero">PERSONALIZA TU<br><span class="subtitulo-hero">paleta</span></h2>
-      <button href="#" class="boton-hero">Desde aquí</button>
+      <button href="paletaF.html" class="boton-hero">Desde aquí</button>
     </div>
   </header>
 
@@ -243,9 +243,71 @@
   <div id="popup-cookies" class="cont-cookies">
     <p>Utilizamos cookies para analizar el tráfico de nuestro sitio, ofrecerte contenido personalizado así como anuncios y contenido en redes sociales basados en tus intereses. Puedes seleccionar tus preferencias de cookies u obtener más información sobre las cookies clickando en Personalizar o en cualquier momento en nuestra Política de Cookies. Puedes clickar en Aceptar o Rechazar para aceptar o rechazar todas las cookies. Puede revocar su consentimiento en cualquier momento haciendo clic en
   "Gestionar cookies" en la parte inferior de Política de Cookies.</p>
-    <button id="aceptar-cookies">Aceptar</button>
-    <button id="rechazar-cookies">Rechazar</button>
+    <div class="botones-cont">
+      <button id="aceptar-cookies">Aceptar</button>
+      <button id="rechazar-cookies">Rechazar</button>
+      <button id="rechazar-cookies">Personalizar</button>
+    </div>
   </div>
+
+  <div id="popup-preferencias-cookies" class="popup-preferencias-cookies">
+  <div class="popup-contenido">
+    <h2>Preferencias de cookies</h2>
+    <p class="popup-descripcion">Selecciona qué tipo de cookies deseas permitir:</p>
+    
+    <!-- Nuevo contenedor para las opciones con scroll independiente -->
+    <div class="opciones-container">
+      <div class="opcion-cookie">
+        <label class="checkbox-container">
+          <input type="checkbox" checked disabled>
+          <span class="checkmark disabled"></span>
+          <div class="opcion-texto">
+            <strong>Cookies necesarias</strong>
+            <p>Estas cookies son estrictamente necesarias para permitir el acceso y el uso de nuestros servicios.</p>
+          </div>
+        </label>
+      </div>
+      
+      <div class="opcion-cookie">
+        <label class="checkbox-container">
+          <input type="checkbox" id="cookies-analiticas">
+          <span class="checkmark"></span>
+          <div class="opcion-texto">
+            <strong>Cookies analíticas</strong>
+            <p>Estas cookies nos ayudan a determinar y entender cómo los usuarios interactúan con nuestros servicios y los utilizan.</p>
+          </div>
+        </label>
+      </div>
+      
+      <div class="opcion-cookie">
+        <label class="checkbox-container">
+          <input type="checkbox" id="cookies-personalizacion">
+          <span class="checkmark"></span>
+          <div class="opcion-texto">
+            <strong>Cookies de personalización</strong>
+            <p>En base a tu historial de navegación y compras, optimiza tu experiencia con recomendaciones personalizadas en Black Cosmetics.</p>
+          </div>
+        </label>
+      </div>
+      
+      <div class="opcion-cookie">
+        <label class="checkbox-container">
+          <input type="checkbox" id="cookies-marketing">
+          <span class="checkmark"></span>
+          <div class="opcion-texto">
+            <strong>Cookies de marketing</strong>
+            <p>Estas cookies nos ayudan a proporcionar un marketing más específico y relevante, así como a evaluar la eficacia de nuestras comunicaciones de marketing mediante el seguimiento de las tasas de apertura y las conversiones.</p>
+          </div>
+        </label>
+      </div>
+    </div>
+    
+    <div class="botones-preferencias">
+      <button id="cerrar-preferencias" class="btn-cerrar">Cerrar</button>
+      <button id="guardar-preferencias" class="btn-guardar">Guardar preferencias</button>
+    </div>
+  </div>
+</div>
   <!--Footer diosmio ayudame-->
   <footer class="footer">
     <div class="footer-contenido">
