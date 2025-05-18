@@ -133,6 +133,10 @@
 
   /*MEDIA QUERY PARA PANTALLA DE TELEFONOS*/
   @media screen and (max-width: 768px) {
+
+    .menu{
+      padding: 1rem;
+    }
     .barra-navegacion{
       padding: 1rem;
       display: flex;
