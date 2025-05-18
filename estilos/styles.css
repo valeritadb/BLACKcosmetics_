@@ -2424,6 +2424,10 @@
     margin-bottom: 10px;
 }
 
+.color-label, #color-seleccionado{
+  font-family: 'Quicksand', sans-serif;
+}
+
 .color-opciones {
     display: flex;
     gap: 10px;
