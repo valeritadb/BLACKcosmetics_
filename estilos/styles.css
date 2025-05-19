@@ -731,6 +731,15 @@
   margin-left: 1rem;
 }
 
+/* Checkbox marcado */
+.checkbox-container input:checked ~ .checkmark:not(.disabled) {
+  background-color: #000;
+  border-color: #000;
+}
+/* Checkbox marcado */
+.checkbox-container input:hover ~ .checkmark:not(.disabled) {
+  border-color: #000;
+}
 
 #boton-popup{
   background-color: black;
@@ -785,9 +794,13 @@
   }
 
   .img-popup {
-    width: 100%;
+    width: 98%;
     height: 30vh; /* Reducir tamaño de la imagen */
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 1rem
+  }
+
+  .img-popup img{
+    border-radius: 1rem;
   }
 
   .content-popup {
@@ -1946,7 +1959,7 @@
 .dropdown-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0.1rem;
     max-width: 1200px; /* Ancho máximo del contenido */
     margin: 0 auto; /* Centrar el contenedor */
     padding: 0 20px; /* Padding horizontal */
@@ -1955,7 +1968,7 @@
 
 /* Categorías */
 .category {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     text-align: left; /* Alinear a la izquierda */
 }
 
@@ -2433,6 +2446,7 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    border: rgb(233, 233, 233) 0.01px solid;
 }
 
 .variante-card:hover {
@@ -2483,6 +2497,9 @@
     color: #777;
     margin-bottom: 15px;
 }
+.variante-info a {
+  text-decoration: none;
+}
 
 .precio {
     font-family: 'Quicksand', sans-serif;
@@ -2494,7 +2511,8 @@
 }
 
 /* Botón de compra */
-.btn-comprar {
+ .btn-comprar {
+    
     color: black;
     border: none;
     padding: 10px 20px;
@@ -2507,7 +2525,29 @@
     width: 100%;
     border: 1px solid black;
     background-color: white;
+    z-index: 15000;
 
+}
+.variante-card .btn-comprar {
+  display: none;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+    z-index: 15000;
+
+}
+
+.variante-card:hover .btn-comprar{
+  display: block;
 }
 
 .btn-comprar a {
