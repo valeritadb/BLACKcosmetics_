@@ -1288,16 +1288,16 @@
 
 .contenido-mensaje h2 {
   font-family: 'Anton', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 550;
     vertical-align:top;
 }
 .contenido-mensaje span{
 
-  margin-top: 0rem;
   font-family: "Nothing You Could Do", cursive;
   color:#c6937f;
   letter-spacing: 0.2rem;
+  margin-top: 2rem;
 }
 
 .contenido-mensaje p {
