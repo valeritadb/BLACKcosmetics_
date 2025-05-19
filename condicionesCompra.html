@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="estilos/styles.css">
     <script src="estilos/script.js" defer></script>
+    <link rel="stylesheet" href="estilos/carrito.css">
+    <script src="estilos/carrito.js"></script>
 
     <script src="https://kit.fontawesome.com/3696051f79.js" crossorigin="anonymous"></script>
   <title>Condiciones de Compra de Black.</title>
@@ -69,10 +71,25 @@
     <!-- Cesta de compras -->
     <div class="overlay-carrito" id="overlay-carrito"></div>
     <div class="carrito" id="carrito">
-        <span id="cerrar-carrito" class="cerrar">&times;</span>
-        <h2>CESTA</h2>
-        <hr>
-        <p>Este carrito no es funcional :) pero trabajamos para que pronto lo sea.</p>
+        <div class="carrito-titulo">
+            <h2>CESTA</h2>
+            <span class="contador" id="contador-titulo">1 artículo</span>
+            <span id="cerrar-carrito" class="cerrar">&times;</span>
+        </div>
+        
+        <div class="carrito-contenido" id="contenido-carrito">
+            <!-- El contenido del carrito se generará dinámicamente con JavaScript -->
+        </div>
+        
+        <div class="carrito-total" id="total-carrito">
+            <div class="carrito-total-texto">Total</div>
+            <div class="carrito-total-precio">0.00€</div>
+        </div>
+        
+        <div class="carrito-botones">
+            <button id="btn-comprar-carrito" class="btn-carrito btn-comprar">Comprar - 0.00€</button>
+            <button id="btn-seguir-comprando" class="btn-carrito btn-seguir">Seguir comprando</button>
+        </div>
     </div>
     </header>
 
