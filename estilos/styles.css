@@ -970,16 +970,13 @@
     letter-spacing: 0.1rem;
 }
 
-.carrito ul {
-    list-style: none;
-    padding: 0;
+.carrito p{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  color: gray;
+  text-align: center;
+  font-size: 0.8rem;
 }
-
-.carrito li {
-    padding: 0.5rem;
-    border-bottom: 1px solid #ccc;
-}
-
 .carrito button {
     display: block;
     width: 100%;
