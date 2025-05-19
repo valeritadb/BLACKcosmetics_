@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const checkboxMarketing = document.getElementById('cookies-marketing');
     
     // Comprobar si ya se han aceptado las cookies
-    const cookiesAceptadas = localStorage.getItem('cookiesAceptadas');
-    const preferenciasGuardadas = localStorage.getItem('preferenciasGuardadas');
+    const cookiesAceptadas = sessionStorage.getItem('cookiesAceptadas');
+    const preferenciasGuardadas = sessionStorage.getItem('preferenciasGuardadas');
     
     // Si no se han aceptado las cookies, mostrar el banner
     if (!cookiesAceptadas && !preferenciasGuardadas) {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función para aceptar todas las cookies
     function aceptarCookies() {
-        localStorage.setItem('cookiesAceptadas', 'true');
+        sessionStorage.setItem('cookiesAceptadas', 'true');
         cookiesBanner.style.display = 'none';
         
         // Guardar todas las preferencias como aceptadas
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             personalizacion: true,
             marketing: true
         };
-        localStorage.setItem('preferenciasGuardadas', JSON.stringify(todasPreferencias));
+        sessionStorage.setItem('preferenciasGuardadas', JSON.stringify(todasPreferencias));
         
         // Actualizar los checkboxes
         checkboxAnaliticas.checked = true;
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función para rechazar todas las cookies excepto las necesarias
     function rechazarCookies() {
-        localStorage.setItem('cookiesAceptadas', 'false');
+        sessionStorage.setItem('cookiesAceptadas', 'false');
         cookiesBanner.style.display = 'none';
         
         // Guardar todas las preferencias como rechazadas (excepto las necesarias)
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             personalizacion: false,
             marketing: false
         };
-        localStorage.setItem('preferenciasGuardadas', JSON.stringify(preferenciasRechazadas));
+        sessionStorage.setItem('preferenciasGuardadas', JSON.stringify(preferenciasRechazadas));
         
         // Actualizar los checkboxes
         checkboxAnaliticas.checked = false;
@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
             marketing: checkboxMarketing.checked
         };
         
-        localStorage.setItem('preferenciasGuardadas', JSON.stringify(preferenciasPersonalizadas));
-        localStorage.setItem('cookiesAceptadas', 'personalizado');
+        sessionStorage.setItem('preferenciasGuardadas', JSON.stringify(preferenciasPersonalizadas));
+        sessionStorage.setItem('cookiesAceptadas', 'personalizado');
         
         popupPreferencias.style.display = 'none';
         cookiesBanner.style.display = 'none';
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         popupPreferencias.style.display = 'none';
         
         // Si no hay preferencias guardadas, volver a mostrar el banner
-        if (!localStorage.getItem('preferenciasGuardadas')) {
+        if (!sessionStorage.getItem('preferenciasGuardadas')) {
             cookiesBanner.style.display = 'flex';
         }
     });
