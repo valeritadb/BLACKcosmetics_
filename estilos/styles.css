@@ -2824,7 +2824,7 @@
 }
 
 .rating-general {
-    color: #FFD700;
+    color: #c6937f;
     font-size: 18px;
 }
 
@@ -2865,7 +2865,7 @@
 }
 
 .resena-rating {
-    color: #FFD700;
+    color: #c6937f;
     font-size: 14px;
     margin-bottom: 5px;
 }
@@ -2942,7 +2942,7 @@
 
 .rating-selector i:hover,
 .rating-selector i.active {
-    color: #FFD700;
+    color: #c6937f;
 }
 
 .btn-enviar-resena {
