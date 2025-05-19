@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Si no se han aceptado las cookies, mostrar el banner
     if (!cookiesAceptadas && !preferenciasGuardadas) {
         cookiesBanner.style.display = 'flex';
-    }
+    }else{
+        cookiesBanner.style.display = 'none';}
     
     // Si hay preferencias guardadas, cargarlas
     if (preferenciasGuardadas) {
