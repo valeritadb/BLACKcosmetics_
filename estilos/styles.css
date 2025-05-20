@@ -3018,3 +3018,128 @@
 .carrito-item-imagen {
   display: none !important;
 }
+
+/*Estilos de inicio de sesion*/
+
+/* Estilos para el contenedor principal del login */
+.login-container {
+    max-width: 500px;
+    margin: 120px auto 60px;
+    padding: 0 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Título del formulario */
+.login-title {
+   font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #c6937f;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Campos de entrada */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #000;
+}
+
+/* Enlace de contraseña olvidada */
+.forgot-password {
+    text-align: center;
+    margin-top: -0.5rem;
+}
+
+.forgot-password a {
+    color: #666;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #000;
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.login-button:hover {
+    background-color: #333;
+}
+
+/* Enlace para crear cuenta */
+.create-account {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.create-account span {
+    color: #666;
+}
+
+.create-account a {
+    color: #c6937f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .login-container {
+        margin: 100px auto 40px;
+    }
+    
+    .login-title {
+        font-size: 1.8rem;
+    }
+    
+    .form-input {
+        padding: 0.7rem;
+    }
+    
+    .login-button {
+        padding: 0.8rem;
+    }
+}

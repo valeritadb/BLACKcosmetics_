@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Valeria De Barros">
+    
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="estilos/styles.css">
+    <!-- Estilos específicos para el login -->
+    <script src="estilos/script.js"></script>
+    <link rel="stylesheet" href="estilos/carrito.css">
+    
+    <script src="estilos/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/3696051f79.js" crossorigin="anonymous"></script>
+    
+    <title>Iniciar Sesión - BLACK cosmetics</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header secundario">
+        <!-- Menú de navegación -->
+        <nav class="barra-navegacion" id="second-header">
+            <!-- Iconos de usuario --> 
+            <div class="iconos-usuario">
+                <a href="mantenimiento.html"><i class="fa fa-search"></i></a>
+                <a href="mantenimiento.html"><i class="fa fa-user"></i></a>
+                <a href="mantenimiento.html"><i class="fa fa-heart"></i></a>
+                <a href="#"><i class="fa fa-shopping-bag"></i></a>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo">
+                <h1><a href="index.html">BLACK.<span class="subtitulo">cosmetics</span></a></h1>
+            </div>
+
+            <!-- Enlaces del menú -->
+            <ul class="menu">
+                <li class="has-dropdown">
+                    <a href="maquillaje.html">MAQUILLAJE</a>
+                    <!-- Menú desplegable -->
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <div class="category">
+                                <a href="individual.html" class="category-title">INDIVIDUAL</a>
+                                <ul>
+                                    <li><a href="bronceador.html">Bronceador</a></li>
+                                    <li><a href="colorete.html">Colorete</a></li>
+                                    <li><a href="iluminador.html">Iluminador</a></li>
+                                </ul>
+                            </div>
+                            <div class="category">
+                                <a href="paletaF.html" class="category-title">PALETAS</a>
+                            </div>
+                            <div class="category">
+                                <a href="maquillaje.html" class="ver-todo">VER TODO</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="mantenimiento.html">PERSONALIZA</a></li>
+                <li><a href="index.html">VOSOTRAS</a></li>
+                <li><a href="sobreNosotros.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+
+        <!-- Cesta de compras -->
+        <div class="overlay-carrito" id="overlay-carrito"></div>
+        <div class="carrito" id="carrito">
+            <div class="carrito-titulo">
+                <h2>CESTA</h2>
+                <span id="cerrar-carrito" class="cerrar">&times;</span>
+            </div>
+            
+            <div class="carrito-contenido" id="contenido-carrito">
+                <!-- El contenido del carrito se generará dinámicamente con JavaScript -->
+            </div>
+            
+            <div class="carrito-total" id="total-carrito">
+                <div class="carrito-total-texto">Total</div>
+                <div class="carrito-total-precio">0.00€</div>
+            </div>
+            
+            <div class="carrito-botones">
+                <button id="btn-comprar-carrito" class="btn-carrito btn-comprar">Comprar</button>
+                <button id="btn-seguir-comprando" class="btn-carrito btn-seguir">Seguir comprando</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal - Formulario de login -->
+    <main>
+        <div class="login-container">
+            <h1 class="login-title">INICIAR SESIÓN</h1>
+            
+            <form class="login-form" action="#" method="post">
+                <div class="form-group">
+                    <input type="email" class="form-input" name="email" placeholder="Correo electrónico" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="form-input" name="password" placeholder="Contraseña" required>
+                </div>
+                
+                <div class="forgot-password">
+                    <a href="#">¿Has olvidado la contraseña?</a>
+                </div>
+                
+                <button type="submit" class="login-button">INICIAR SESIÓN</button>
+            </form>
+            
+            <div class="create-account">
+                <span>¿No tienes cuenta? </span>
+                <a href="#">Crear una cuenta</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">   
+        <div class="footer-contenido">
+            <h2>¡Unete a la lista VIP!</h2>
+            <p>Recibirás ofertas exclusivas, un 10% de descuento en tu primer pedido, novedades y más.</p>
+            <input type="email" placeholder="Email*">
+            <br>
+            <span class="aviso">*Al registrarte aceptas nuestros <a href="avisoLegal.html">Términos & Condiciones</a> y nuestra <a href="politicaPrivacidad.html">Política de Privacidad</a></span>
+
+            <div class="footer-redes">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <nav class="footer-links">
+                <a href="contacto.html">Contáctanos</a>
+                <a href="condicionesCompra.html">Preguntas frecuentes</a>
+                <a href="condicionesCompra.html">Envíos y devoluciones</a>
+                <a href="sobreNosotros.html">About us</a>
+            </nav>
+
+            <div class="footer-legal">
+                <a href="avisoLegal.html">Aviso legal</a>
+                <a href="politicaPrivacidad.html">Politica de Privacidad</a>
+                <a href="avisoLegal.html">Términos & condiciones</a>
+                <a href="condicionesCompra.html">Condiciones de compra</a>
+                <a href="politicaCookies.html">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
