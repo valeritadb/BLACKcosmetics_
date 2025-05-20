@@ -169,9 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const productoHTML = document.createElement("div")
         productoHTML.className = "carrito-item"
         productoHTML.innerHTML = `
-                    <div class="carrito-item-imagen">
-                        <img src="${item.imagen}" alt="${item.nombre}">
-                    </div>
                     <div class="carrito-item-detalles">
                         <h3>${item.nombre}</h3>
                         <p class="carrito-item-color">${item.color}</p>

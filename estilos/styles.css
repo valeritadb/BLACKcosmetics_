@@ -971,7 +971,7 @@
   background: white;
   box-shadow: -4px 0px 10px rgba(0,0,0,0.3);
   padding: 1rem;
-  transition: right 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 2000;
 }
 
@@ -3008,4 +3008,13 @@
     .btn-comprar {
         max-width: 100%;
     }
+}
+
+/* Asegúrate de que el contador del carrito esté presente en el HTML de la cabecera. */
+/*
+<span class="contador-carrito" id="contador-carrito"></span>
+*/
+
+.carrito-item-imagen {
+  display: none !important;
 }

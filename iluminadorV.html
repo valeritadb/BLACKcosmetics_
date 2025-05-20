@@ -75,6 +75,10 @@
         <h2>CESTA</h2>
         <hr>
         <p>Este carrito no es funcional :) pero trabajamos para que pronto lo sea.</p>
+        <div class="carrito-botones">
+            <button id="btn-comprar-carrito" class="btn-carrito btn-comprar">Comprar</button>
+            <button id="btn-seguir-comprando" class="btn-carrito btn-seguir">Seguir comprando</button>
+        </div>
     </div>
     </header>
     <BR></BR>
@@ -119,7 +123,7 @@
                 </div>
 
                 <!-- Botón de compra -->
-                <button class="btn-comprar">Añadir a la cesta</button>
+                <button class="btn-comprar" id="btn-agregar-carrito">Añadir a la cesta</button>
             </div>
         </div>
 
@@ -381,6 +385,21 @@
         currentImageIndex = (currentImageIndex + 1) % imagenes.length;
         productImage.src = imagenes[currentImageIndex];
     });
+    
+    // --- AÑADIR AL CARRITO DESDE LA FICHA DE PRODUCTO ---
+    const btnAgregarCarrito = document.getElementById('btn-agregar-carrito');
+    btnAgregarCarrito.addEventListener('click', function() {
+        const id = "iluminador-velvet";
+        const nombre = document.getElementById('producto-nombre').textContent.trim();
+        const precio = 34.99;
+        const imagen = document.getElementById('producto-imagen').src;
+        const color = document.querySelector('.color-opcion.active').getAttribute('data-color');
+        const cantidad = parseInt(document.querySelector('.cantidad-input').value);
+
+        if (window.agregarAlCarrito) {
+            window.agregarAlCarrito(id, nombre, precio, imagen, color, cantidad);
+        }
+    });
 });
     </script>
    
@@ -409,7 +428,7 @@
 
         <div class="footer-legal">
             <a href="avisoLegal.html">Aviso legal</a>
-            <a href="politicaPrivacidad.html">Politica de Privacidad</a>
+            <a href="politicaPrivacidad.html">Política de Privacidad</a>
             <a href="avisoLegal.html">Términos & condiciones</a>
             <a href="condicionesCompra.html">Condiciones de compra</a>
             <a href="politicaCookies.html">Política de Cookies</a>

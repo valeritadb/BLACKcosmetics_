@@ -74,7 +74,6 @@
     <div class="carrito" id="carrito">
         <div class="carrito-titulo">
             <h2>CESTA</h2>
-            <span class="contador" id="contador-titulo">1 artículo</span>
             <span id="cerrar-carrito" class="cerrar">&times;</span>
         </div>
         
@@ -88,7 +87,7 @@
         </div>
         
         <div class="carrito-botones">
-            <button id="btn-comprar-carrito" class="btn-carrito btn-comprar">Comprar - 0.00€</button>
+            <button id="btn-comprar-carrito" class="btn-carrito btn-comprar">Comprar</button>
             <button id="btn-seguir-comprando" class="btn-carrito btn-seguir">Seguir comprando</button>
         </div>
     </div>
@@ -138,7 +137,7 @@
                 </div>
 
                 <!-- Botón de compra -->
-                <button class="btn-comprar">Añadir a la cesta</button>
+                <button class="btn-comprar" id="btn-agregar-carrito">Añadir a la cesta</button>
             </div>
         </div>
 
@@ -402,6 +401,21 @@
     nextBtn.addEventListener('click', function() {
         currentImageIndex = (currentImageIndex + 1) % imagenes.length;
         productImage.src = imagenes[currentImageIndex];
+    });
+    
+    // --- AÑADIR AL CARRITO DESDE LA FICHA DE PRODUCTO ---
+    const btnAgregarCarrito = document.getElementById('btn-agregar-carrito');
+    btnAgregarCarrito.addEventListener('click', function() {
+        const id = "colorete-melted";
+        const nombre = document.getElementById('producto-nombre').textContent.trim();
+        const precio = 34.99;
+        const imagen = document.getElementById('producto-imagen').src;
+        const color = document.querySelector('.color-opcion.active').getAttribute('data-color');
+        const cantidad = parseInt(document.querySelector('.cantidad-input').value);
+
+        if (window.agregarAlCarrito) {
+            window.agregarAlCarrito(id, nombre, precio, imagen, color, cantidad);
+        }
     });
 });
     </script>

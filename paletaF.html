@@ -72,10 +72,24 @@
     <!-- Cesta de compras -->
     <div class="overlay-carrito" id="overlay-carrito"></div>
     <div class="carrito" id="carrito">
-        <span id="cerrar-carrito" class="cerrar">&times;</span>
-        <h2>CESTA</h2>
-        <hr>
-        <p>Este carrito no es funcional :) pero trabajamos para que pronto lo sea.</p>
+        <div class="carrito-titulo">
+            <h2>CESTA</h2>
+            <span id="cerrar-carrito" class="cerrar">&times;</span>
+        </div>
+        
+        <div class="carrito-contenido" id="contenido-carrito">
+            <!-- El contenido del carrito se generará dinámicamente con JavaScript -->
+        </div>
+        
+        <div class="carrito-total" id="total-carrito">
+            <div class="carrito-total-texto">Total</div>
+            <div class="carrito-total-precio">0.00€</div>
+        </div>
+        
+        <div class="carrito-botones">
+            <button id="btn-comprar-carrito" class="btn-carrito btn-comprar">Comprar</button>
+            <button id="btn-seguir-comprando" class="btn-carrito btn-seguir">Seguir comprando</button>
+        </div>
     </div>
     </header>
     <BR></BR>
@@ -120,7 +134,7 @@
                 </div>
 
                 <!-- Botón de compra -->
-                <button class="btn-comprar">Añadir a la cesta</button>
+                <button class="btn-comprar" id="btn-agregar-carrito">Añadir a la cesta</button>
             </div>
         </div>
 
@@ -381,6 +395,21 @@
     nextBtn.addEventListener('click', function() {
         currentImageIndex = (currentImageIndex + 1) % imagenes.length;
         productImage.src = imagenes[currentImageIndex];
+    });
+    
+    // --- AÑADIR AL CARRITO DESDE LA FICHA DE PRODUCTO ---
+    const btnAgregarCarrito = document.getElementById('btn-agregar-carrito');
+    btnAgregarCarrito.addEventListener('click', function() {
+        const id = "paleta-ambient-lighting";
+        const nombre = document.getElementById('producto-nombre').textContent.trim();
+        const precio = 69.99;
+        const imagen = document.getElementById('producto-imagen').src;
+        const color = document.querySelector('.color-opcion.active').getAttribute('data-color');
+        const cantidad = parseInt(document.querySelector('.cantidad-input').value);
+
+        if (window.agregarAlCarrito) {
+            window.agregarAlCarrito(id, nombre, precio, imagen, color, cantidad);
+        }
     });
 });
     </script>
